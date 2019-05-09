@@ -1,0 +1,1289 @@
+[[package]]
+category = "dev"
+description = "A configurable sidebar-enabled Sphinx theme"
+name = "alabaster"
+optional = false
+python-versions = "*"
+version = "0.7.12"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "main"
+description = "Fast ASN.1 parser and serializer with definitions for private keys, public keys, certificates, CRL, OCSP, CMS, PKCS#3, PKCS#7, PKCS#8, PKCS#12, PKCS#5, X.509 and TSP"
+name = "asn1crypto"
+optional = false
+python-versions = "*"
+version = "0.24.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Atomic file writes."
+name = "atomicwrites"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "1.3.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Classes Without Boilerplate"
+name = "attrs"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "19.1.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Removes unused imports and unused variables"
+name = "autoflake"
+optional = false
+python-versions = "*"
+version = "1.3"
+
+[package.dependencies]
+pyflakes = ">=1.1.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Internationalization utilities"
+name = "babel"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "2.6.0"
+
+[package.dependencies]
+pytz = ">=0a"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "main"
+description = "Modern password hashing for your software and your servers"
+name = "bcrypt"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "3.1.6"
+
+[package.dependencies]
+cffi = ">=1.1"
+six = ">=1.4.1"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "main"
+description = "Python package for providing Mozilla's CA Bundle."
+name = "certifi"
+optional = false
+python-versions = "*"
+version = "2019.3.9"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "main"
+description = "Foreign Function Interface for Python calling C code."
+name = "cffi"
+optional = false
+python-versions = "*"
+version = "1.12.3"
+
+[package.dependencies]
+pycparser = "*"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "main"
+description = "Universal encoding detector for Python 2 and 3"
+name = "chardet"
+optional = false
+python-versions = "*"
+version = "3.0.4"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "main"
+description = "Composable command line interface toolkit"
+name = "click"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "7.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "main"
+description = "Fish, Bash, Zsh and PowerShell completion for Click"
+name = "click-completion"
+optional = false
+python-versions = "*"
+version = "0.5.1"
+
+[package.dependencies]
+click = "*"
+jinja2 = "*"
+shellingham = "*"
+six = "*"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "main"
+description = "Enable git-like did-you-mean feature in click."
+name = "click-didyoumean"
+optional = false
+python-versions = "*"
+version = "0.0.3"
+
+[package.dependencies]
+click = "*"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "main"
+description = "Cross-platform colored terminal text."
+name = "colorama"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "0.4.1"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Code coverage measurement for Python"
+name = "coverage"
+optional = false
+python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*, <4"
+version = "4.5.3"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "main"
+description = "TextUI colors for Python."
+name = "crayons"
+optional = false
+python-versions = "*"
+version = "0.2.0"
+
+[package.dependencies]
+colorama = "*"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "main"
+description = "cryptography is a package which provides cryptographic recipes and primitives to Python developers."
+name = "cryptography"
+optional = false
+python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*"
+version = "2.6.1"
+
+[package.dependencies]
+asn1crypto = ">=0.21.0"
+cffi = ">=1.8,<1.11.3 || >1.11.3"
+six = ">=1.4.1"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "A high-level Python Web framework that encourages rapid development and clean, pragmatic design."
+name = "django"
+optional = false
+python-versions = ">=3.5"
+version = "2.2.1"
+
+[package.dependencies]
+pytz = "*"
+sqlparse = "*"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Django template coverage.py plugin"
+name = "django-coverage-plugin"
+optional = false
+python-versions = "*"
+version = "1.6.0"
+
+[package.dependencies]
+coverage = ">=4.0"
+six = ">=1.4.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Docutils -- Python Documentation Utilities"
+name = "docutils"
+optional = false
+python-versions = "*"
+version = "0.14"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Discover and load entry points from installed packages."
+name = "entrypoints"
+optional = false
+python-versions = ">=2.7"
+version = "0.3"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "An implementation of lxml.xmlfile for the standard library"
+name = "et-xmlfile"
+optional = false
+python-versions = "*"
+version = "1.0.1"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "main"
+description = "High level SSH command execution"
+name = "fabric"
+optional = false
+python-versions = "*"
+version = "2.4.0"
+
+[package.dependencies]
+cryptography = ">=1.1"
+invoke = ">=1.1,<2.0"
+paramiko = ">=2.4"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "the modular source code checker: pep8, pyflakes and co"
+name = "flake8"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "3.7.7"
+
+[package.dependencies]
+entrypoints = ">=0.3.0,<0.4.0"
+mccabe = ">=0.6.0,<0.7.0"
+pycodestyle = ">=2.5.0,<2.6.0"
+pyflakes = ">=2.1.0,<2.2.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "A simple framework for building complex web applications."
+name = "flask"
+optional = false
+python-versions = "*"
+version = "1.0.2"
+
+[package.dependencies]
+Jinja2 = ">=2.10"
+Werkzeug = ">=0.14"
+click = ">=5.1"
+itsdangerous = ">=0.24"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "WSGI HTTP Server for UNIX"
+name = "gunicorn"
+optional = false
+python-versions = ">=2.6, !=3.0.*, !=3.1.*"
+version = "19.9.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "main"
+description = "Internationalized Domain Names in Applications (IDNA)"
+name = "idna"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "2.8"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Getting image size from png/jpeg/jpeg2000/gif file"
+name = "imagesize"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "1.1.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "main"
+description = "Pythonic task execution"
+name = "invoke"
+optional = false
+python-versions = "*"
+version = "1.2.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "IPython-enabled pdb"
+name = "ipdb"
+optional = false
+python-versions = ">=2.7"
+version = "0.12"
+
+[package.dependencies]
+setuptools = "*"
+
+[package.dependencies.ipython]
+python = ">=3.4"
+version = ">=5.1.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "IPython: Productive Interactive Computing"
+name = "ipython"
+optional = false
+python-versions = "*"
+version = "7.5.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Various helpers to pass data to untrusted environments and back."
+name = "itsdangerous"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "1.1.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Julian dates from proleptic Gregorian and Julian calendars."
+name = "jdcal"
+optional = false
+python-versions = "*"
+version = "1.4.1"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "main"
+description = "A small but fast and easy to use stand-alone template engine written in pure python."
+name = "jinja2"
+optional = false
+python-versions = "*"
+version = "2.10.1"
+
+[package.dependencies]
+MarkupSafe = ">=0.23"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "main"
+description = "Safely add untrusted strings to HTML/XML markup."
+name = "markupsafe"
+optional = false
+python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*"
+version = "1.1.1"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "McCabe checker, plugin for flake8"
+name = "mccabe"
+optional = false
+python-versions = "*"
+version = "0.6.1"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "More routines for operating on iterables, beyond itertools"
+marker = "python_version > \"2.7\""
+name = "more-itertools"
+optional = false
+python-versions = ">=3.4"
+version = "7.0.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Optional static typing for Python"
+name = "mypy"
+optional = false
+python-versions = "*"
+version = "0.701"
+
+[package.dependencies]
+mypy_extensions = ">=0.4.0,<0.5.0"
+typed-ast = ">=1.3.1,<1.4.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Experimental type system extensions for programs checked with the mypy typechecker."
+name = "mypy-extensions"
+optional = false
+python-versions = "*"
+version = "0.4.1"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "NumPy is the fundamental package for array computing with Python."
+name = "numpy"
+optional = false
+python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*"
+version = "1.16.3"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "A Python library to read/write Excel 2010 xlsx/xlsm files"
+name = "openpyxl"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+version = "2.6.2"
+
+[package.dependencies]
+et_xmlfile = "*"
+jdcal = "*"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Core utilities for Python packages"
+name = "packaging"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "19.0"
+
+[package.dependencies]
+pyparsing = ">=2.0.2"
+six = "*"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Powerful data structures for data analysis, time series, and statistics"
+name = "pandas"
+optional = false
+python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*"
+version = "0.24.2"
+
+[package.dependencies]
+numpy = ">=1.12.0"
+python-dateutil = ">=2.5.0"
+pytz = ">=2011k"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "main"
+description = "SSH2 protocol library"
+name = "paramiko"
+optional = false
+python-versions = "*"
+version = "2.4.2"
+
+[package.dependencies]
+bcrypt = ">=3.1.3"
+cryptography = ">=1.5"
+pyasn1 = ">=0.1.7"
+pynacl = ">=1.0.1"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Python Imaging Library (Fork)"
+name = "pillow"
+optional = false
+python-versions = "*"
+version = "6.0.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "plugin and hook calling mechanisms for python"
+name = "pluggy"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "0.11.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "library with cross-python path, ini-parsing, io, code, log facilities"
+name = "py"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "1.8.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "main"
+description = "ASN.1 types and codecs"
+name = "pyasn1"
+optional = false
+python-versions = "*"
+version = "0.4.5"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Python style guide checker"
+name = "pycodestyle"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "2.5.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "main"
+description = "C parser in Python"
+name = "pycparser"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "2.19"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Cryptographic modules for Python."
+name = "pycrypto"
+optional = false
+python-versions = "*"
+version = "2.6.1"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "passive checker of Python programs"
+name = "pyflakes"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "2.1.1"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Pygments is a syntax highlighting package written in Python."
+name = "pygments"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+version = "2.4.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "main"
+description = "Python binding to the Networking and Cryptography (NaCl) library"
+name = "pynacl"
+optional = false
+python-versions = "*"
+version = "1.3.0"
+
+[package.dependencies]
+cffi = ">=1.4.1"
+six = "*"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Python parsing module"
+name = "pyparsing"
+optional = false
+python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
+version = "2.4.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "pytest: simple powerful testing with Python"
+name = "pytest"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "4.4.2"
+
+[package.dependencies]
+atomicwrites = ">=1.0"
+attrs = ">=17.4.0"
+colorama = "*"
+pluggy = ">=0.11"
+py = ">=1.5.0"
+setuptools = "*"
+six = ">=1.10.0"
+
+[package.dependencies.more-itertools]
+python = ">2.7"
+version = ">=4.0.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Pytest plugin for measuring coverage."
+name = "pytest-cov"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "2.7.1"
+
+[package.dependencies]
+coverage = ">=4.4"
+pytest = ">=3.6"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "pytest plugin for generating HTML reports"
+name = "pytest-html"
+optional = false
+python-versions = "*"
+version = "1.20.0"
+
+[package.dependencies]
+pytest = ">=3.0"
+pytest-metadata = "*"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "pytest plugin for test session metadata"
+name = "pytest-metadata"
+optional = false
+python-versions = "*"
+version = "1.8.0"
+
+[package.dependencies]
+pytest = ">=2.9.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "pytest-sugar is a plugin for pytest that changes the default look and feel of pytest (e.g. progressbar, show tests that fail instantly)."
+name = "pytest-sugar"
+optional = false
+python-versions = "*"
+version = "0.9.2"
+
+[package.dependencies]
+packaging = ">=14.1"
+pytest = ">=2.9"
+termcolor = ">=1.1.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Extensions to the standard Python datetime module"
+name = "python-dateutil"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
+version = "2.8.0"
+
+[package.dependencies]
+six = ">=1.5"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "World timezone definitions, modern and historical"
+name = "pytz"
+optional = false
+python-versions = "*"
+version = "2019.1"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "main"
+description = "Python HTTP for Humans."
+name = "requests"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "2.21.0"
+
+[package.dependencies]
+certifi = ">=2017.4.17"
+chardet = ">=3.0.2,<3.1.0"
+idna = ">=2.5,<2.9"
+urllib3 = ">=1.21.1,<1.25"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "main"
+description = "Tool to Detect Surrounding Shell"
+name = "shellingham"
+optional = false
+python-versions = ">=2.6,!=3.0,!=3.1,!=3.2,!=3.3"
+version = "1.3.1"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "main"
+description = "Python 2 and 3 compatibility utilities"
+name = "six"
+optional = false
+python-versions = ">=2.6, !=3.0.*, !=3.1.*"
+version = "1.12.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "This package provides 16 stemmer algorithms (15 + Poerter English stemmer) generated from Snowball algorithms."
+name = "snowballstemmer"
+optional = false
+python-versions = "*"
+version = "1.2.1"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Python documentation generator"
+name = "sphinx"
+optional = false
+python-versions = ">=3.5"
+version = "2.0.1"
+
+[package.dependencies]
+Jinja2 = ">=2.3"
+Pygments = ">=2.0"
+alabaster = ">=0.7,<0.8"
+babel = ">=1.3,<2.0 || >2.0"
+colorama = ">=0.3.5"
+docutils = ">=0.12"
+imagesize = "*"
+packaging = "*"
+requests = ">=2.5.0"
+setuptools = "*"
+snowballstemmer = ">=1.1"
+sphinxcontrib-applehelp = "*"
+sphinxcontrib-devhelp = "*"
+sphinxcontrib-htmlhelp = "*"
+sphinxcontrib-jsmath = "*"
+sphinxcontrib-qthelp = "*"
+sphinxcontrib-serializinghtml = "*"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = ""
+name = "sphinxcontrib-applehelp"
+optional = false
+python-versions = "*"
+version = "1.0.1"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = ""
+name = "sphinxcontrib-devhelp"
+optional = false
+python-versions = "*"
+version = "1.0.1"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = ""
+name = "sphinxcontrib-htmlhelp"
+optional = false
+python-versions = "*"
+version = "1.0.2"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "A sphinx extension which renders display math in HTML via JavaScript"
+name = "sphinxcontrib-jsmath"
+optional = false
+python-versions = ">=3.5"
+version = "1.0.1"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = ""
+name = "sphinxcontrib-qthelp"
+optional = false
+python-versions = "*"
+version = "1.0.2"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = ""
+name = "sphinxcontrib-serializinghtml"
+optional = false
+python-versions = "*"
+version = "1.1.3"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Database Abstraction Library"
+name = "sqlalchemy"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "1.3.3"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Non-validating SQL parser"
+name = "sqlparse"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "0.3.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "ANSII Color formatting for output in terminal."
+name = "termcolor"
+optional = false
+python-versions = "*"
+version = "1.1.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "a fork of Python 2 and 3 ast modules with type comment support"
+name = "typed-ast"
+optional = false
+python-versions = "*"
+version = "1.3.5"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "main"
+description = "HTTP library with thread-safe connection pooling, file post, and more."
+name = "urllib3"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, <4"
+version = "1.24.3"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "main"
+description = "The comprehensive WSGI web application library."
+name = "werkzeug"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "0.15.2"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "A Python module for creating Excel XLSX files."
+name = "xlsxwriter"
+optional = false
+python-versions = "*"
+version = "1.1.8"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Library to create spreadsheet files compatible with MS Excel 97/2000/XP/2003 XLS files, on any platform, with Python 2.6, 2.7, 3.3+"
+name = "xlwt"
+optional = false
+python-versions = "*"
+version = "1.3.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[metadata]
+content-hash = "5051d0362a9cc9c96bd6b1709ac3370f9ec1c3a2e3b52e639de264f765ce49a3"
+python-versions = "^3.7"
+
+[metadata.hashes]
+alabaster = []
+asn1crypto = []
+atomicwrites = []
+attrs = []
+autoflake = []
+babel = []
+bcrypt = []
+certifi = []
+cffi = []
+chardet = []
+click = []
+click-completion = []
+click-didyoumean = []
+colorama = []
+coverage = []
+crayons = []
+cryptography = []
+django = []
+django-coverage-plugin = []
+docutils = []
+entrypoints = []
+et-xmlfile = []
+fabric = []
+flake8 = []
+flask = []
+gunicorn = []
+idna = []
+imagesize = []
+invoke = []
+ipdb = []
+ipython = []
+itsdangerous = []
+jdcal = []
+jinja2 = []
+markupsafe = []
+mccabe = []
+more-itertools = []
+mypy = []
+mypy-extensions = []
+numpy = []
+openpyxl = []
+packaging = []
+pandas = []
+paramiko = []
+pillow = []
+pluggy = []
+py = []
+pyasn1 = []
+pycodestyle = []
+pycparser = []
+pycrypto = []
+pyflakes = []
+pygments = []
+pynacl = []
+pyparsing = []
+pytest = []
+pytest-cov = []
+pytest-html = []
+pytest-metadata = []
+pytest-sugar = []
+python-dateutil = []
+pytz = []
+requests = []
+shellingham = []
+six = []
+snowballstemmer = []
+sphinx = []
+sphinxcontrib-applehelp = []
+sphinxcontrib-devhelp = []
+sphinxcontrib-htmlhelp = []
+sphinxcontrib-jsmath = []
+sphinxcontrib-qthelp = []
+sphinxcontrib-serializinghtml = []
+sqlalchemy = []
+sqlparse = []
+termcolor = []
+typed-ast = []
+urllib3 = []
+werkzeug = []
+xlsxwriter = []
+xlwt = []

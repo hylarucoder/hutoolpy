@@ -1,0 +1,85 @@
+[tool.poetry]
+name = "prevenger"
+version = "0.0.1"
+description = "final commom utils for prevengers"
+include = []
+authors = [
+    "twocucao <twocucao@gmail.com>"
+]
+
+readme = 'README.md'
+
+repository = "https://github.com/twocucao/prevengers"
+homepage = "https://github.com/twocucao/prevengers"
+
+keywords = ['prevenger']
+
+[[tool.poetry.source]]
+name = "douban"
+url = 'https://pypi.douban.com/simple/'
+
+[tool.poetry.dependencies]
+python = "^3.7"
+werkzeug = "*"
+requests = "*"
+fabric = "*"
+click_didyoumean = "^0.0.3"
+crayons = "^0.2.0"
+click_completion = "^0.5.1"
+
+[tool.poetry.dev-dependencies]
+ipython = "*"
+sqlalchemy = "*"
+
+gunicorn = "*"
+flask = "*"
+
+pandas = "*"
+
+xlsxwriter = "*"
+xlwt = "*"
+openpyxl = "*"
+
+django = "*"
+ipdb = "*"
+pillow = "*"
+pycrypto = "^2.6"
+
+sphinx = "*"
+autoflake = "*"
+coverage = "*"
+django-coverage-plugin = "*"
+"flake8" = "*"
+mypy = "*"
+
+pytest = "*"
+pytest-cov = "*"
+pytest-html = "*"
+pytest-sugar = "*"
+
+
+[tool.poetry.scripts]
+prevenger-cli = 'prevenger.cli:main'
+
+[tool.black]
+py36 = true
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | assets
+  | scripts
+)/
+'''
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+
