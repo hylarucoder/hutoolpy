@@ -22,15 +22,16 @@ url = 'https://pypi.douban.com/simple/'
 python = "^3.7"
 werkzeug = "*"
 requests = "*"
-fabric = "*"
 click_didyoumean = "^0.0.3"
 crayons = "^0.2.0"
 click_completion = "^0.5.1"
+sqlalchemy = "*"
+pycrypto = "*"
+pillow = "*"
 
 [tool.poetry.dev-dependencies]
 ipython = "*"
-sqlalchemy = "*"
-
+fabric = "*"
 gunicorn = "*"
 flask = "*"
 
@@ -42,13 +43,10 @@ openpyxl = "*"
 
 django = "*"
 ipdb = "*"
-pillow = "*"
-pycrypto = "^2.6"
 
 sphinx = "*"
 autoflake = "*"
 coverage = "*"
-django-coverage-plugin = "*"
 "flake8" = "*"
 mypy = "*"
 
