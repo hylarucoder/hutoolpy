@@ -12,6 +12,10 @@ TIME_FMT = "%H:%M:%S"
 
 
 class DateTime:
+    """
+    TODO: 毫秒级
+    """
+
     _datetime: datetime.datetime
 
     def __init__(self, dt: [str, datetime.datetime]):
@@ -31,9 +35,18 @@ class DateTime:
 
     def hour_justified(self, left=True) -> DateTime:
         if left:
-            t = datetime.datetime(self._datetime.year, self._datetime.month, self._datetime.day, 0, 0, 0)
+            t = datetime.datetime(
+                self._datetime.year, self._datetime.month, self._datetime.day, 0, 0, 0
+            )
         else:
-            t = datetime.datetime(self._datetime.year, self._datetime.month, self._datetime.day, 23, 59, 59)
+            t = datetime.datetime(
+                self._datetime.year,
+                self._datetime.month,
+                self._datetime.day,
+                23,
+                59,
+                59,
+            )
         return DateTime(t)
 
     def day_justified(self, left=True) -> DateTime:
@@ -41,8 +54,12 @@ class DateTime:
             t = datetime.datetime(self._datetime.year, self._datetime.month, 1, 0, 0, 0)
         else:
             t = datetime.datetime(
-                self._datetime.year, self._datetime.month, monthrange(self._datetime.year, self._datetime.month)[1],
-                23, 59, 59
+                self._datetime.year,
+                self._datetime.month,
+                monthrange(self._datetime.year, self._datetime.month)[1],
+                23,
+                59,
+                59,
             )
         return DateTime(t)
 
@@ -51,7 +68,11 @@ class DateTime:
         if left:
             t = DateTime(start).hour_justified().raw
         else:
-            t = DateTime(start + datetime.timedelta(days=6)).hour_justified(left=False).raw
+            t = (
+                DateTime(start + datetime.timedelta(days=6))
+                .hour_justified(left=False)
+                .raw
+            )
         return DateTime(t)
 
     def month_justified(self, left=True) -> DateTime:
@@ -73,7 +94,17 @@ class DateTime:
         pass
 
     @classmethod
-    def gen_datetime_range(cls, from_datetime, to_datetime, year=0, month=0, day=0, hour=0, minute=0, seconds=0):
+    def gen_datetime_range(
+        cls,
+        from_datetime,
+        to_datetime,
+        year=0,
+        month=0,
+        day=0,
+        hour=0,
+        minute=0,
+        seconds=0,
+    ):
         pass
 
     def __eq__(self, o: [DateTime, Date, Time]) -> bool:
@@ -190,6 +221,17 @@ class Date:
     @property
     def fmt(self):
         return self._date.strftime(DATE_FMT)
+
+    @classmethod
+    def gen_date_range(cls, start: Date, end: Date, step=1):
+        return [
+            cls(start.raw + datetime.timedelta(days=x))
+            for x in range(0, (end.raw - start.raw).days, step=step)
+        ]
+
+    @classmethod
+    def gen_date_range_fmt(cls, start: Date, end: Date, step=1):
+        return list(map(cls.gen_date_range(start=start, end=end, step=step)))
 
 
 class Time:
