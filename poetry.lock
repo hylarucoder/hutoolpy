@@ -191,7 +191,7 @@ url = "https://pypi.douban.com/simple"
 
 [[package]]
 category = "main"
-description = "Cross-platform colored terminal draw_chars."
+description = "Cross-platform colored terminal text."
 name = "colorama"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
@@ -643,7 +643,7 @@ type = "legacy"
 url = "https://pypi.douban.com/simple"
 
 [[package]]
-category = "main"
+category = "dev"
 description = "Python Imaging Library (Fork)"
 name = "pillow"
 optional = false
@@ -721,7 +721,7 @@ type = "legacy"
 url = "https://pypi.douban.com/simple"
 
 [[package]]
-category = "main"
+category = "dev"
 description = "Cryptographic modules for Python."
 name = "pycrypto"
 optional = false
@@ -795,16 +795,17 @@ description = "pytest: simple powerful testing with Python"
 name = "pytest"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "4.4.2"
+version = "4.5.0"
 
 [package.dependencies]
 atomicwrites = ">=1.0"
 attrs = ">=17.4.0"
 colorama = "*"
-pluggy = ">=0.11"
+pluggy = ">=0.9,<0.10 || >0.10,<1.0"
 py = ">=1.5.0"
 setuptools = "*"
 six = ">=1.10.0"
+wcwidth = "*"
 
 [package.dependencies.more-itertools]
 python = ">2.7"
@@ -917,14 +918,14 @@ category = "main"
 description = "Python HTTP for Humans."
 name = "requests"
 optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "2.21.0"
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+version = "2.22.0"
 
 [package.dependencies]
 certifi = ">=2017.4.17"
 chardet = ">=3.0.2,<3.1.0"
 idna = ">=2.5,<2.9"
-urllib3 = ">=1.21.1,<1.25"
+urllib3 = ">=1.21.1,<1.25.0 || >1.25.0,<1.25.1 || >1.25.1,<1.26"
 
 [package.source]
 reference = "douban"
@@ -1138,7 +1139,20 @@ description = "HTTP library with thread-safe connection pooling, file post, and 
 name = "urllib3"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, <4"
-version = "1.24.3"
+version = "1.25.2"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Measures number of Terminal column cells of wide-character codes"
+name = "wcwidth"
+optional = false
+python-versions = "*"
+version = "0.1.7"
 
 [package.source]
 reference = "douban"
@@ -1151,7 +1165,7 @@ description = "The comprehensive WSGI web application library."
 name = "werkzeug"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "0.15.2"
+version = "0.15.4"
 
 [package.source]
 reference = "douban"
@@ -1185,7 +1199,7 @@ type = "legacy"
 url = "https://pypi.douban.com/simple"
 
 [metadata]
-content-hash = "c74172d344a5d7e0ec6cb92897b050f83918c28393f3565ad4131fd3c91ba696"
+content-hash = "565f8f516db925f4174402f5b8d21d64065b85d878bc3fb3ad807c477f4e0b30"
 python-versions = "^3.7"
 
 [metadata.hashes]
@@ -1266,6 +1280,7 @@ sqlparse = []
 termcolor = []
 typed-ast = []
 urllib3 = []
+wcwidth = []
 werkzeug = []
 xlsxwriter = []
 xlwt = []
