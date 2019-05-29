@@ -54,6 +54,7 @@ pytest = "*"
 pytest-cov = "*"
 pytest-html = "*"
 pytest-sugar = "*"
+sqlalchemy-stubs = "^0.1.0"
 
 
 [tool.poetry.scripts]

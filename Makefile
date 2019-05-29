@@ -19,5 +19,6 @@ help:
 test: ## test
 	pytest
 
-publish: ## test
+publish: ## publish package to pypi
 	poetry publish --build
+

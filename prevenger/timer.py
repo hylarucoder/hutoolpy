@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import datetime
 from calendar import monthrange
+from typing import Union
 
 WEEK_PREFIX = "周"
 DATETIME_FMT = "%Y-%m-%d %H:%M:%S"
@@ -18,7 +19,7 @@ class DateTime:
 
     _datetime: datetime.datetime
 
-    def __init__(self, dt: [str, datetime.datetime]):
+    def __init__(self, dt: Union[str, datetime.date, datetime.datetime]):
         if isinstance(dt, str):
             if len(dt) == 19:
                 self._datetime = datetime.datetime.strptime(dt, DATETIME_FMT)
@@ -30,7 +31,7 @@ class DateTime:
             raise NotImplementedError
 
     @staticmethod
-    def now():
+    def now() -> DateTime:
         return DateTime(datetime.datetime.now())
 
     def hour_justified(self, left=True) -> DateTime:
@@ -70,8 +71,8 @@ class DateTime:
         else:
             t = (
                 DateTime(start + datetime.timedelta(days=6))
-                .hour_justified(left=False)
-                .raw
+                    .hour_justified(left=False)
+                    .raw
             )
         return DateTime(t)
 
@@ -95,19 +96,19 @@ class DateTime:
 
     @classmethod
     def gen_datetime_range(
-        cls,
-        from_datetime,
-        to_datetime,
-        year=0,
-        month=0,
-        day=0,
-        hour=0,
-        minute=0,
-        seconds=0,
+            cls,
+            from_datetime,
+            to_datetime,
+            year=0,
+            month=0,
+            day=0,
+            hour=0,
+            minute=0,
+            seconds=0,
     ):
         pass
 
-    def __eq__(self, o: [DateTime, Date, Time]) -> bool:
+    def __eq__(self, o: Union[object, DateTime, Date, Time]) -> bool:
         if isinstance(o, DateTime):
             return self.raw == o.raw
         if isinstance(o, Date):
@@ -116,10 +117,10 @@ class DateTime:
             return self.time == o
         raise NotImplementedError
 
-    def __ne__(self, o: [DateTime, Date, Time]) -> bool:
+    def __ne__(self, o: Union[object, DateTime, Date, Time]) -> bool:
         return not self.__eq__(o)
 
-    def __gt__(self, o: [DateTime, Date, Time]) -> bool:
+    def __gt__(self, o: Union[object, DateTime, Date, Time]) -> bool:
         if isinstance(o, DateTime):
             return self.raw > o.raw
         if isinstance(o, Date):
@@ -128,10 +129,10 @@ class DateTime:
             return self.time > o
         raise NotImplementedError
 
-    def __ge__(self, o: [DateTime, Date, Time]) -> bool:
+    def __ge__(self, o: Union[object, DateTime, Date, Time]) -> bool:
         return self.__eq__(o) or self.__gt__(o)
 
-    def __lt__(self, o: [DateTime, Date, Time]) -> bool:
+    def __lt__(self, o: Union[DateTime, Date, Time]) -> bool:
         if isinstance(o, DateTime):
             return self.raw < o.raw
         if isinstance(o, Date):
@@ -140,8 +141,8 @@ class DateTime:
             return self.time < o
         raise NotImplementedError
 
-    def __le__(self, o: [DateTime, Date, Time]) -> bool:
-        return self.__eq__(o) or self.__lt__(o)
+    def __le__(self, o: Union[object, DateTime, Date, Time]) -> bool:
+        return self.__eq__(o) or self.__lt__(o)  # type: ignore
 
     def __str__(self) -> str:
         return super().__str__()
@@ -161,13 +162,17 @@ class DateTime:
 class Date:
     _date: datetime.date
 
-    def __init__(self, _date: [str, datetime.datetime, DateTime]):
+    def __init__(self, _date: Union[str, datetime.datetime, datetime.date, DateTime, Date]):
         if isinstance(_date, str):
             self._date = datetime.datetime.strptime(_date, DATE_FMT).date()
         elif isinstance(_date, datetime.datetime):
             self._date = _date.date()
+        elif isinstance(_date, datetime.date):
+            self._date = _date
         elif isinstance(_date, DateTime):
             self._date = _date.date.raw
+        elif isinstance(_date, Date):
+            self._date = _date.raw
         else:
             raise NotImplementedError
 
@@ -184,34 +189,34 @@ class Date:
     def month_justified(self, left=True) -> Date:
         return Date(DateTime(self._date).month_justified(left=left))
 
-    def __eq__(self, o: [DateTime, Date]) -> bool:
+    def __eq__(self, o: Union[object, DateTime, Date]) -> bool:
         if isinstance(o, Date):
             return self.raw == o.raw
         if isinstance(o, DateTime):
             return self == o.date
         raise NotImplementedError
 
-    def __ne__(self, o: [DateTime, Date]) -> bool:
+    def __ne__(self, o: Union[object, DateTime, Date]) -> bool:
         return not self.__eq__(o)
 
-    def __lt__(self, o: [DateTime, Date]) -> bool:
+    def __lt__(self, o: Union[object, DateTime, Date]) -> bool:
         if isinstance(o, DateTime):
             return self < o.date
         if isinstance(o, Date):
             return self.raw < o.raw
         raise NotImplementedError
 
-    def __le__(self, o: [DateTime, Date]) -> bool:
+    def __le__(self, o: Union[object, DateTime, Date]) -> bool:
         return self.__lt__(o) or self.__eq__(o)
 
-    def __gt__(self, o: [DateTime, Date]) -> bool:
+    def __gt__(self, o: Union[object, DateTime, Date]) -> bool:
         if isinstance(o, DateTime):
             return self > o.date
         if isinstance(o, Date):
             return self.raw > o.raw
         raise NotImplementedError
 
-    def __ge__(self, o: [DateTime, Date]) -> bool:
+    def __ge__(self, o: Union[object, DateTime, Date]) -> bool:
         return self.__gt__(o) or self.__eq__(o)
 
     @property
@@ -231,13 +236,13 @@ class Date:
 
     @classmethod
     def gen_date_range_fmt(cls, start: Date, end: Date, step=1):
-        return list(map(cls.gen_date_range(start=start, end=end, step=step)))
+        return list(map(lambda x: x, cls.gen_date_range(start=start, end=end, step=step)))
 
 
 class Time:
     _time: datetime.time
 
-    def __init__(self, _time: [str, datetime.datetime, DateTime]):
+    def __init__(self, _time: Union[object, str, datetime.datetime, DateTime]):
         if isinstance(_time, str):
             self._time = datetime.datetime.strptime(_time, TIME_FMT).time()
         elif isinstance(_time, datetime.datetime):
@@ -270,32 +275,32 @@ class Time:
     def fmt(self):
         return self._time.strftime(TIME_FMT)
 
-    def __eq__(self, o: [DateTime, Time]) -> bool:
+    def __eq__(self, o: Union[object, DateTime, Time]) -> bool:
         if isinstance(o, Time):
             return self.raw == o.raw
         if isinstance(o, DateTime):
             return self == o.time
         raise NotImplementedError
 
-    def __ne__(self, o: [DateTime, Time]) -> bool:
+    def __ne__(self, o: Union[object, DateTime, Time]) -> bool:
         return not self.__eq__(o)
 
-    def __gt__(self, o: [DateTime, Time]) -> bool:
+    def __gt__(self, o: Union[object, DateTime, Time]) -> bool:
         if isinstance(o, DateTime):
             return self > o.time
         if isinstance(o, Time):
             return self.raw > o.raw
         raise NotImplementedError
 
-    def __lt__(self, o: [DateTime, Time]) -> bool:
+    def __lt__(self, o: Union[object, DateTime, Time]) -> bool:
         if isinstance(o, DateTime):
             return self < o.time
         if isinstance(o, Time):
             return self.raw < o.raw
         raise NotImplementedError
 
-    def __le__(self, o: [DateTime, Time]) -> bool:
+    def __le__(self, o: Union[object, DateTime, Time]) -> bool:
         return self.__lt__(o) or self.__eq__(o)
 
-    def __ge__(self, o: [DateTime, Time]) -> bool:
+    def __ge__(self, o: Union[object, DateTime, Time]) -> bool:
         return self.__gt__(o) or self.__eq__(o)

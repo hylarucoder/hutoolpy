@@ -1,4 +1,7 @@
-def is_blank(s: [str, None]):
+from typing import Union
+
+
+def is_blank(s: Union[str, None]):
     """
     判断是否为空(除去空格换行)
     :param s:
@@ -7,7 +10,7 @@ def is_blank(s: [str, None]):
     return s is None or len(s.strip()) == 0
 
 
-def is_empty(s: [str, None]):
+def is_empty(s: Union[str, None]):
     """
     判断是否为空(包含空格字符)
     :param s:

@@ -10,6 +10,8 @@ http://blog.jobbole.com/96052/
 """
 import re
 
+from prevenger.str_kit.str_kit import is_empty
+
 PT_CHINESE = "([\u4e00-\u9fa5]+)+?"
 PT_CHINESE_AND_NUMBER = "([\u4e00-\u9fa5\d\w]+)+?"
 PT_CLEAN_WORDS = "([\u4e00-\u9fa5\d\s\a\w]+)+?"
@@ -141,9 +143,9 @@ def html_escape_chars_to_string(_str):
         _str
         if is_empty(_str)
         else _str.replace("&lt;", "<")
-        .replace("&gt;", ">")
-        .replace("&amp;", "&")
-        .replace("&quot;", '"')
+            .replace("&gt;", ">")
+            .replace("&amp;", "&")
+            .replace("&quot;", '"')
     )
 
 
@@ -242,34 +244,34 @@ def get_digits_from_chinese(a):
     count = 0
     result = 0
     tmp = 0
-    Billion = 0
+    billion = 0
     while count < len(a):
-        tmpChr = a[count]
+        tmp_chr = a[count]
         # print(tmpChr)
-        tmpNum = chinese_digits_mapping.get(tmpChr, None)
+        tmp_num = chinese_digits_mapping.get(tmp_chr, None)
         # 如果等于1亿
-        if tmpNum == 100000000:
+        if tmp_num == 100000000:
             result += tmp
-            result = result * tmpNum
+            result = result * tmp_num
             # 获得亿以上的数量，将其保存在中间变量Billion中并清空result
-            Billion = Billion * 100000000 + result
+            billion = billion * 100000000 + result
             result = 0
             tmp = 0
         # 如果等于1万
-        elif tmpNum == 10000:
+        elif tmp_num == 10000:
             result += tmp
-            result = result * tmpNum
+            result = result * tmp_num
             tmp = 0
         # 如果等于十或者百，千
-        elif tmpNum >= 10:
+        elif tmp_num >= 10:
             if tmp == 0:
                 tmp = 1
-            result += tmpNum * tmp
+            result += tmp_num * tmp
             tmp = 0
         # 如果是个位数
-        elif tmpNum is not None:
-            tmp = tmp * 10 + tmpNum
+        elif tmp_num is not None:
+            tmp = tmp * 10 + tmp_num
         count += 1
     result = result + tmp
-    result = result + Billion
+    result = result + billion
     return result
