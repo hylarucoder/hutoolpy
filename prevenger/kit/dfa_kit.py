@@ -12,13 +12,13 @@ import re
 
 from prevenger.str_kit.str_kit import is_empty
 
-PT_CHINESE = "([\u4e00-\u9fa5]+)+?"
-PT_CHINESE_AND_NUMBER = "([\u4e00-\u9fa5\d\w]+)+?"
-PT_CLEAN_WORDS = "([\u4e00-\u9fa5\d\s\a\w]+)+?"
+PT_CHINESE = r"([\u4e00-\u9fa5]+)+?"
+PT_CHINESE_AND_NUMBER = r"([\u4e00-\u9fa5\d\w]+)+?"
+PT_CLEAN_WORDS = r"([\u4e00-\u9fa5\d\s\a\w]+)+?"
 PT_CHINESE_ID_CARD = r"([0-9]){7,18}(x|X)?"
 PT_CHINESE_MOB_NUM = (
     r"(?:13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}"
-)  # noqa
+)
 PT_CHINESE_TELEPHONE = r"\d{3}-\d{8}|\d{4}-\d{7}"
 PT_CHINESE_MONEY = r"¥\s*\d+"
 PT_CHINESE_PRICE = r"[$]\s?[+-]?[0-9]{1,3}(?:(?:,?[0-9]{3}))*(?:\.[0-9]{1,2})?"
@@ -27,7 +27,7 @@ PT_DATE = r""
 PT_DATETIME = r""
 PT_DOMAIN = (
     r"[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(/.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+/.?"
-)  # noqa
+)
 PT_EMAIL = r"([a-z0-9!#$%&'*+\/=?^_`{|.}~-]+@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)"  # noqa
 PT_HEX_COLOR = r"(#(?:[0-9a-fA-F]{8})|#(?:[0-9a-fA-F]{3}){1,2})\\b"
 PT_HTTP_HTTPS_LINK = r""
@@ -234,9 +234,9 @@ chinese_digits_mapping = {
 }
 
 
-def get_digits_from_chinese(a):
+def get_digits_from_chinese(digit: str):
     """
-    :param a:
+    :param digit:
     :return:
     author: binux(17175297.hk@gmail.com)
     modified by: twocucao
@@ -245,10 +245,9 @@ def get_digits_from_chinese(a):
     result = 0
     tmp = 0
     billion = 0
-    while count < len(a):
-        tmp_chr = a[count]
-        # print(tmpChr)
-        tmp_num = chinese_digits_mapping.get(tmp_chr, None)
+    while count < len(digit):
+        tmp_chr = digit[count]
+        tmp_num = chinese_digits_mapping.get(tmp_chr)
         # 如果等于1亿
         if tmp_num == 100000000:
             result += tmp
