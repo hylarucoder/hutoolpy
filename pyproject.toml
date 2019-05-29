@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "prevenger"
-version = "0.0.1"
+version = "0.0.5"
 description = "final commom utils for prevengers"
 include = []
 authors = [
@@ -26,14 +26,14 @@ click_didyoumean = "^0.0.3"
 crayons = "^0.2.0"
 click_completion = "^0.5.1"
 sqlalchemy = "*"
-pycrypto = "*"
-pillow = "*"
 
 [tool.poetry.dev-dependencies]
 ipython = "*"
 fabric = "*"
 gunicorn = "*"
 flask = "*"
+pycrypto = "*"
+pillow = "*"
 
 pandas = "*"
 
@@ -54,6 +54,7 @@ pytest = "*"
 pytest-cov = "*"
 pytest-html = "*"
 pytest-sugar = "*"
+sqlalchemy-stubs = "^0.1.0"
 
 
 [tool.poetry.scripts]

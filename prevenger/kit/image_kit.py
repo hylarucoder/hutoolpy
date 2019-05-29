@@ -13,11 +13,11 @@ def data_uri_decode():
 
 
 def b64_encode(s: str) -> str:
-    return base64.b64encode(s)
+    return str(base64.b64encode(s.encode("utf-8")),"utf-8")
 
 
 def b64_decode(s: str) -> str:
-    return base64.b64decode(s)
+    return base64.b64decode(s).decode()
 
 
 def save_as_jpg(infile, outfile):

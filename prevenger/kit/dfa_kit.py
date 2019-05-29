@@ -10,13 +10,15 @@ http://blog.jobbole.com/96052/
 """
 import re
 
-PT_CHINESE = "([\u4e00-\u9fa5]+)+?"
-PT_CHINESE_AND_NUMBER = "([\u4e00-\u9fa5\d\w]+)+?"
-PT_CLEAN_WORDS = "([\u4e00-\u9fa5\d\s\a\w]+)+?"
+from prevenger.str_kit.str_kit import is_empty
+
+PT_CHINESE = r"([\u4e00-\u9fa5]+)+?"
+PT_CHINESE_AND_NUMBER = r"([\u4e00-\u9fa5\d\w]+)+?"
+PT_CLEAN_WORDS = r"([\u4e00-\u9fa5\d\s\a\w]+)+?"
 PT_CHINESE_ID_CARD = r"([0-9]){7,18}(x|X)?"
 PT_CHINESE_MOB_NUM = (
     r"(?:13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}"
-)  # noqa
+)
 PT_CHINESE_TELEPHONE = r"\d{3}-\d{8}|\d{4}-\d{7}"
 PT_CHINESE_MONEY = r"¥\s*\d+"
 PT_CHINESE_PRICE = r"[$]\s?[+-]?[0-9]{1,3}(?:(?:,?[0-9]{3}))*(?:\.[0-9]{1,2})?"
@@ -25,7 +27,7 @@ PT_DATE = r""
 PT_DATETIME = r""
 PT_DOMAIN = (
     r"[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(/.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+/.?"
-)  # noqa
+)
 PT_EMAIL = r"([a-z0-9!#$%&'*+\/=?^_`{|.}~-]+@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)"  # noqa
 PT_HEX_COLOR = r"(#(?:[0-9a-fA-F]{8})|#(?:[0-9a-fA-F]{3}){1,2})\\b"
 PT_HTTP_HTTPS_LINK = r""
@@ -141,9 +143,9 @@ def html_escape_chars_to_string(_str):
         _str
         if is_empty(_str)
         else _str.replace("&lt;", "<")
-        .replace("&gt;", ">")
-        .replace("&amp;", "&")
-        .replace("&quot;", '"')
+            .replace("&gt;", ">")
+            .replace("&amp;", "&")
+            .replace("&quot;", '"')
     )
 
 
@@ -232,9 +234,9 @@ chinese_digits_mapping = {
 }
 
 
-def get_digits_from_chinese(a):
+def get_digits_from_chinese(digit: str):
     """
-    :param a:
+    :param digit:
     :return:
     author: binux(17175297.hk@gmail.com)
     modified by: twocucao
@@ -242,34 +244,33 @@ def get_digits_from_chinese(a):
     count = 0
     result = 0
     tmp = 0
-    Billion = 0
-    while count < len(a):
-        tmpChr = a[count]
-        # print(tmpChr)
-        tmpNum = chinese_digits_mapping.get(tmpChr, None)
+    billion = 0
+    while count < len(digit):
+        tmp_chr = digit[count]
+        tmp_num = chinese_digits_mapping.get(tmp_chr)
         # 如果等于1亿
-        if tmpNum == 100000000:
+        if tmp_num == 100000000:
             result += tmp
-            result = result * tmpNum
+            result = result * tmp_num
             # 获得亿以上的数量，将其保存在中间变量Billion中并清空result
-            Billion = Billion * 100000000 + result
+            billion = billion * 100000000 + result
             result = 0
             tmp = 0
         # 如果等于1万
-        elif tmpNum == 10000:
+        elif tmp_num == 10000:
             result += tmp
-            result = result * tmpNum
+            result = result * tmp_num
             tmp = 0
         # 如果等于十或者百，千
-        elif tmpNum >= 10:
+        elif tmp_num >= 10:
             if tmp == 0:
                 tmp = 1
-            result += tmpNum * tmp
+            result += tmp_num * tmp
             tmp = 0
         # 如果是个位数
-        elif tmpNum is not None:
-            tmp = tmp * 10 + tmpNum
+        elif tmp_num is not None:
+            tmp = tmp * 10 + tmp_num
         count += 1
     result = result + tmp
-    result = result + Billion
+    result = result + billion
     return result

@@ -35,7 +35,7 @@ from PIL.ImageDraw import Draw
 from PIL.ImageFont import truetype
 
 T_SEQUENCE = tuple([t / 20.0 for t in range(21)])
-beziers = {}
+beziers: dict = {}
 
 
 def pascal_row(n):
@@ -45,7 +45,7 @@ def pascal_row(n):
     x, numerator = 1, n
     for denominator in range(1, n // 2 + 1):
         x *= numerator
-        x /= denominator
+        x //= denominator
         result.append(x)
         numerator -= 1
     if n & 1 == 0:
