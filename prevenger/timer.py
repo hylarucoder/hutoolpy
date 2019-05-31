@@ -71,8 +71,8 @@ class DateTime:
         else:
             t = (
                 DateTime(start + datetime.timedelta(days=6))
-                    .hour_justified(left=False)
-                    .raw
+                .hour_justified(left=False)
+                .raw
             )
         return DateTime(t)
 
@@ -96,15 +96,15 @@ class DateTime:
 
     @classmethod
     def gen_datetime_range(
-            cls,
-            from_datetime,
-            to_datetime,
-            year=0,
-            month=0,
-            day=0,
-            hour=0,
-            minute=0,
-            seconds=0,
+        cls,
+        from_datetime,
+        to_datetime,
+        year=0,
+        month=0,
+        day=0,
+        hour=0,
+        minute=0,
+        seconds=0,
     ):
         pass
 
@@ -162,7 +162,9 @@ class DateTime:
 class Date:
     _date: datetime.date
 
-    def __init__(self, _date: Union[str, datetime.datetime, datetime.date, DateTime, Date]):
+    def __init__(
+        self, _date: Union[str, datetime.datetime, datetime.date, DateTime, Date]
+    ):
         if isinstance(_date, str):
             self._date = datetime.datetime.strptime(_date, DATE_FMT).date()
         elif isinstance(_date, datetime.datetime):
@@ -236,7 +238,9 @@ class Date:
 
     @classmethod
     def gen_date_range_fmt(cls, start: Date, end: Date, step=1):
-        return list(map(lambda x: x, cls.gen_date_range(start=start, end=end, step=step)))
+        return list(
+            map(lambda x: x, cls.gen_date_range(start=start, end=end, step=step))
+        )
 
 
 class Time:

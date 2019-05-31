@@ -22,27 +22,25 @@ PT_CHINESE_MOB_NUM = (
 PT_CHINESE_TELEPHONE = r"\d{3}-\d{8}|\d{4}-\d{7}"
 PT_CHINESE_MONEY = r"¥\s*\d+"
 PT_CHINESE_PRICE = r"[$]\s?[+-]?[0-9]{1,3}(?:(?:,?[0-9]{3}))*(?:\.[0-9]{1,2})?"
-PT_CHINESE_SETENCE = r"[\u4e00-\u9fa5]{1,}"
+PT_CHINESE_SENTENCE = r"[\u4e00-\u9fa5]{1,}"
 PT_DATE = r""
 PT_DATETIME = r""
-PT_DOMAIN = (
-    r"[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(/.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+/.?"
-)
+PT_DOMAIN = r"[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(/.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+/.?"
 PT_EMAIL = r"([a-z0-9!#$%&'*+\/=?^_`{|.}~-]+@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)"  # noqa
 PT_HEX_COLOR = r"(#(?:[0-9a-fA-F]{8})|#(?:[0-9a-fA-F]{3}){1,2})\\b"
 PT_HTTP_HTTPS_LINK = r""
 PT_INT_NUM = r"[0-9]*"
 PT_IP_V4 = r"(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)"  # noqa
 PT_IP_V6 = r"\s*(?!.*::.*::)(?:(?!:)|:(?=:))(?:[0-9a-f]{0,4}(?:(?<=::)|(?<!::):)){6}(?:[0-9a-f]{0,4}(?:(?<=::)|(?<!::):)[0-9a-f]{0,4}(?:(?<=::)|(?<!:)|(?<=:)(?<!::):)|(?:25[0-4]|2[0-4]\d|1\d\d|[1-9]?\d)(?:\.(?:25[0-4]|2[0-4]\d|1\d\d|[1-9]?\d)){3})\s*"  # noqa
-PT_PREFERED_DATE = r"\d{4}-\d{1,2}-\d{1,2}"
-PT_PREFERED_DATE_TIME = r""
+PT_PREFERRED_DATE = r"\d{4}-\d{1,2}-\d{1,2}"
+PT_PREFERRED_DATE_TIME = r""
 PT_TIME = r""
 PT_QQ_NUM = r"[1-9][0-9]{4,}"
 PT_UUID = r"[a-f\d]{8}-[a-f\d]{4}-[a-f\d]{4}-[a-f\d]{4}-[a-f\d]{12}"
 
 
 def filter_chinese_characters(_str):
-    new_str = re.sub(PT_CHINESE_SETENCE, "", _str)
+    new_str = re.sub(PT_CHINESE_SENTENCE, "", _str)
     return new_str
 
 
@@ -143,9 +141,9 @@ def html_escape_chars_to_string(_str):
         _str
         if is_empty(_str)
         else _str.replace("&lt;", "<")
-            .replace("&gt;", ">")
-            .replace("&amp;", "&")
-            .replace("&quot;", '"')
+        .replace("&gt;", ">")
+        .replace("&amp;", "&")
+        .replace("&quot;", '"')
     )
 
 

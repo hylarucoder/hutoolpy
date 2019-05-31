@@ -13,7 +13,7 @@ def data_uri_decode():
 
 
 def b64_encode(s: str) -> str:
-    return str(base64.b64encode(s.encode("utf-8")),"utf-8")
+    return str(base64.b64encode(s.encode("utf-8")), "utf-8")
 
 
 def b64_decode(s: str) -> str:

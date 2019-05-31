@@ -153,7 +153,9 @@ def noise_filter(number=50, color="#EEEECC", level=2):
     return drawer
 
 
-def draw_chars(fonts, font_sizes=None, drawings=None, color="#5C87B2", squeeze_factor=0.8):
+def draw_chars(
+    fonts, font_sizes=None, drawings=None, color="#5C87B2", squeeze_factor=0.8
+):
     fonts = tuple(
         [truetype(name, size) for name in fonts for size in font_sizes or (65, 70, 75)]
     )
@@ -179,9 +181,9 @@ def draw_chars(fonts, font_sizes=None, drawings=None, color="#5C87B2", squeeze_f
         width, height = image.size
         offset = int(
             (
-                    width
-                    - sum(int(i.size[0] * squeeze_factor) for i in char_images[:-1])
-                    - char_images[-1].size[0]
+                width
+                - sum(int(i.size[0] * squeeze_factor) for i in char_images[:-1])
+                - char_images[-1].size[0]
             )
             / 2
         )
@@ -241,7 +243,9 @@ def rotate_filter(angle=25):
 
 
 def create_wheezy_captcha(chars, width: int = 200, height: int = 75) -> Image:
-    default_font_path = os.path.dirname(os.path.dirname(__file__)) + "/assets/helvetica.ttf"
+    default_font_path = (
+        os.path.dirname(os.path.dirname(__file__)) + "/assets/helvetica.ttf"
+    )
     captcha_image = captcha(
         drawings=[
             background(),
