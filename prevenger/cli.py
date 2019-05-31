@@ -85,9 +85,7 @@ def self_test():
     pytest.cmdline.main(args_str)
 
 
-@click.command(
-    short_help="create wheezy captcha",
-)
+@click.command(short_help="create wheezy captcha")
 @click.option("--f", default=".", help="make captcha.")
 def captcha(f="."):
     chars = rand_letters_digits(5)
