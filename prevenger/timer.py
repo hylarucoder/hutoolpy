@@ -106,6 +106,10 @@ class DateTime:
         minute=0,
         seconds=0,
     ):
+        print(seconds)
+        print(seconds)
+        print(seconds)
+        print(seconds)
         pass
 
     def __eq__(self, o: Union[object, DateTime, Date, Time]) -> bool:
