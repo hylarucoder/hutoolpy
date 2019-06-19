@@ -20,5 +20,6 @@ test: ## test
 	pytest
 
 publish: ## publish package to pypi
+	poetry version
 	poetry publish --build
 
