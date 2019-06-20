@@ -42,7 +42,9 @@ def test_timer_justified():
     assert dt.month_justified(left=False) == DateTime("2019-12-31 23:59:59")
 
     dt = DateTime("2019-05-04 20:30:00")
-    assert dt.hour_justified().day_justified().week_justified().month_justified() == DateTime("2019-01-01 00:00:00")
+    assert dt.hour_justified().day_justified().week_justified().month_justified() == DateTime(
+        "2019-01-01 00:00:00"
+    )
 
 
 def test_timer_compare():
@@ -57,8 +59,16 @@ def test_timer_compare():
 
     assert Time("10:00:01") < DateTime("2017-02-03 10:00:03") < Time("10:00:05")
     assert Time("10:00:01") <= DateTime("2017-02-03 10:00:01") <= Time("10:00:01")
-    assert DateTime("2017-02-03 10:00:01") <= Time("10:00:01") <= DateTime("2017-02-03 10:00:01")
-    assert DateTime("2017-02-03 10:00:01") <= Time("10:00:03") <= DateTime("2017-02-03 10:00:05")
+    assert (
+        DateTime("2017-02-03 10:00:01")
+        <= Time("10:00:01")
+        <= DateTime("2017-02-03 10:00:01")
+    )
+    assert (
+        DateTime("2017-02-03 10:00:01")
+        <= Time("10:00:03")
+        <= DateTime("2017-02-03 10:00:05")
+    )
 
     assert Date("2017-02-03") <= DateTime("2017-02-03 10:00:01") <= Date("2017-02-03")
     assert Date("2017-02-03") < DateTime("2017-02-04 10:00:01") < Date("2017-02-05")
