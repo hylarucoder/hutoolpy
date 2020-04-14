@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "prevenger"
-version = "0.0.6"
+version = "0.0.8"
 description = "final commom utils for prevengers"
 include = []
 authors = [
