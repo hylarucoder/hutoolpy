@@ -10,7 +10,7 @@ http://blog.jobbole.com/96052/
 """
 import re
 
-from prevenger.enhanced.string.str_kit import is_empty
+from prevenger.enhanced.string import is_empty
 
 PT_CHINESE = r"([\u4e00-\u9fa5]+)+?"
 PT_CHINESE_AND_NUMBER = r"([\u4e00-\u9fa5\d\w]+)+?"

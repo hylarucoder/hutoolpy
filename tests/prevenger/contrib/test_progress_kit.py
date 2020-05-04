@@ -1,6 +1,6 @@
 import time
 
-from prevenger.contrib.progress_kit import GeneratorProgressBar
+from prevenger.contrib.progress import GeneratorProgressBar
 
 
 def process(value):

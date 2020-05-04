@@ -6,7 +6,7 @@ import crayons
 from click_didyoumean import DYMCommandCollection
 
 from prevenger.contrib.image.captcha_kit import create_wheezy_captcha
-from prevenger.enhanced.rand_kit import rand_letters_digits
+from prevenger.enhanced.random import rand_letters_digits
 
 click_completion.init()
 

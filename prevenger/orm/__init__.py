@@ -3,7 +3,7 @@ import datetime
 from sqlalchemy import DateTime, Column, Integer
 from sqlalchemy.ext.declarative import declarative_base
 
-from prevenger.decorators.meta_kit import classproperty
+from prevenger.decorators import classproperty
 
 
 def get_current_time():
