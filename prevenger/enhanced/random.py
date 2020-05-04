@@ -1,5 +1,7 @@
 import random
 import string
+import datetime
+import uuid
 
 DEFAULT_RAN_LENGTH = 8
 
@@ -18,9 +20,21 @@ def rand_upper_ascii(length=DEFAULT_RAN_LENGTH):
     return "".join(random.choice(string.ascii_uppercase) for _ in range(length))
 
 
-def rand_date():
-    pass
+def rand_datetime(
+    time_from: datetime.datetime, time_to: datetime.datetime
+) -> datetime.datetime:
+    random_timestamp = random.randint(time_from.timestamp(), time_to.timestamp())
+    return datetime.datetime.fromtimestamp(random_timestamp)
 
 
-def rand_datetime():
-    pass
+def rand_date(date_from: datetime.date, date_to: datetime.date) -> datetime.date:
+    def convert_date_to_datetime(date):
+        return datetime.datetime.combine(date, datetime.datetime.min.time())
+
+    return rand_datetime(
+        convert_date_to_datetime(date_from), convert_date_to_datetime(date_to)
+    ).date()
+
+
+def rand_uuid():
+    return str(uuid.uuid4())
