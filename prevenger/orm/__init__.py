@@ -1,11 +1,9 @@
 import datetime
 
-from sqlalchemy import create_engine, DateTime
-from sqlalchemy.ext.declarative import declarative_base, declared_attr
-from sqlalchemy import Column, Integer, String
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy import DateTime, Column, Integer
+from sqlalchemy.ext.declarative import declarative_base
 
-from prevenger.kit.meta_kit import classproperty
+from prevenger.decorators.meta_kit import classproperty
 
 
 def get_current_time():

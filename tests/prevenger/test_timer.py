@@ -1,4 +1,4 @@
-from prevenger.timer import DateTime, Date, Time
+from prevenger.enhanced.datetime.timer import DateTime, Date, Time
 
 
 def test_timer_datetime_parse_fmt():
