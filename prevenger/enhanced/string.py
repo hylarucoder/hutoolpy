@@ -313,16 +313,6 @@ def re_strip_or_none(_str, strips=" ", replaces=""):
         return None
 
 
-def half_width_to_full_width(_str):
-    raise NotImplementedError
-    return _str
-
-
-def full_width_to_half_width(_str):
-    raise NotImplementedError
-    return _str
-
-
 chinese_digits_mapping = {
     "零": 0,
     "一": 1,
@@ -365,7 +355,7 @@ chinese_digits_mapping = {
 }
 
 
-def get_digits_from_chinese(digit: str):
+def digits_to_chinese(digit: str):
     """
     :param digit:
     :return:

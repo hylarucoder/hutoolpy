@@ -1,3 +1,6 @@
+import time
+
+
 class classproperty(object):
     """
     @property for @classmethod

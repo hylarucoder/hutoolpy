@@ -27,6 +27,8 @@ crayons = "^0.2.0"
 click_completion = "^0.5.1"
 sqlalchemy = "*"
 black = "^19.10b0"
+pydantic = "^1.5.1"
+qrcode = "^6.1"
 
 [tool.poetry.dev-dependencies]
 ipython = "*"
@@ -36,18 +38,17 @@ flask = "*"
 pillow = "*"
 pandas = "*"
 xlsxwriter = "*"
-xlwt = "*"
-openpyxl = "*"
-
+xlrd = "^1.2.0"
 ipdb = "*"
 
 coverage = "*"
-"flake8" = "*"
+flake8 = "*"
 mypy = "*"
 
 pytest = "*"
 pytest-cov = "*"
 pre-commit = "^1.16"
+captcha = "^0.3"
 
 
 [tool.poetry.scripts]
