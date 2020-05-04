@@ -1,6 +1,6 @@
 import pytest
 
-from prevenger.enhanced.string.chinese import (
+from prevenger.enhanced.string import (
     PT_CHINESE_ID_CARD,
     PT_CHINESE_MOB_NUM,
     PT_CHINESE_MONEY,

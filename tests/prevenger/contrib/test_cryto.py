@@ -21,3 +21,11 @@ def hmac_md5(secret: [bytes, str], source: [bytes, str]):
     h = hmac.new(secret, source, hashlib.md5)
     signature = str(base64.encodebytes(h.digest()).strip(), "utf-8")
     return signature
+
+
+def rc4_encrypt(key, msg):
+    pass
+
+
+def rc4_decrypt(key, msg):
+    pass
