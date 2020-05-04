@@ -23,6 +23,7 @@ PT_CHINESE_TELEPHONE = r"\d{3}-\d{8}|\d{4}-\d{7}"
 PT_CHINESE_MONEY = r"¥\s*\d+"
 PT_CHINESE_PRICE = r"[$]\s?[+-]?[0-9]{1,3}(?:(?:,?[0-9]{3}))*(?:\.[0-9]{1,2})?"
 PT_CHINESE_SENTENCE = r"[\u4e00-\u9fa5]{1,}"
+PT_TIME = r""
 PT_DATE = r""
 PT_DATETIME = r""
 PT_DOMAIN = r"[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(/.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+/.?"
@@ -34,7 +35,6 @@ PT_IP_V4 = r"(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(?:25[0-5]|2[0-4][0-9]|[0
 PT_IP_V6 = r"\s*(?!.*::.*::)(?:(?!:)|:(?=:))(?:[0-9a-f]{0,4}(?:(?<=::)|(?<!::):)){6}(?:[0-9a-f]{0,4}(?:(?<=::)|(?<!::):)[0-9a-f]{0,4}(?:(?<=::)|(?<!:)|(?<=:)(?<!::):)|(?:25[0-4]|2[0-4]\d|1\d\d|[1-9]?\d)(?:\.(?:25[0-4]|2[0-4]\d|1\d\d|[1-9]?\d)){3})\s*"  # noqa
 PT_PREFERRED_DATE = r"\d{4}-\d{1,2}-\d{1,2}"
 PT_PREFERRED_DATE_TIME = r""
-PT_TIME = r""
 PT_QQ_NUM = r"[1-9][0-9]{4,}"
 PT_UUID = r"[a-f\d]{8}-[a-f\d]{4}-[a-f\d]{4}-[a-f\d]{4}-[a-f\d]{12}"
 
@@ -149,7 +149,6 @@ def html_escape_chars_to_string(_str):
 
 def extract_links_from_html(_str):
     raise NotImplementedError()
-    return ""
 
 
 def shrink_string(_str, strip_chars=None, nullable=True):
@@ -170,7 +169,7 @@ def shrink_string(_str, strip_chars=None, nullable=True):
         return ""
 
 
-def restrip_or_none(_str, strips=" ", replaces=""):
+def re_strip_or_none(_str, strips=" ", replaces=""):
     if isinstance(_str, str):
         _str = _str.strip(strips + " ").replace(replaces, "")
         if len(_str) == 0:

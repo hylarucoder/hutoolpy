@@ -1,10 +1,73 @@
 [[package]]
+category = "main"
+description = "Simple DNS resolver for asyncio"
+name = "aiodns"
+optional = false
+python-versions = "*"
+version = "2.0.0"
+
+[package.dependencies]
+pycares = ">=3.0.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "main"
+description = "File support for asyncio."
+name = "aiofiles"
+optional = false
+python-versions = "*"
+version = "0.4.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "main"
+description = "Async http client/server framework (asyncio)"
+name = "aiohttp"
+optional = false
+python-versions = ">=3.5.3"
+version = "3.5.4"
+
+[package.dependencies]
+async_timeout = ">=3.0,<4.0"
+attrs = ">=17.3.0"
+chardet = ">=2.0,<4.0"
+multidict = ">=4.0,<5.0"
+yarl = ">=1.0,<2.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
 category = "dev"
 description = "A configurable sidebar-enabled Sphinx theme"
 name = "alabaster"
 optional = false
 python-versions = "*"
 version = "0.7.12"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Disable App Nap on OS X 10.9"
+marker = "python_version >= \"3.4\" and sys_platform == \"darwin\" or sys_platform == \"darwin\""
+name = "appnope"
+optional = false
+python-versions = "*"
+version = "0.1.0"
 
 [package.source]
 reference = "douban"
@@ -41,6 +104,19 @@ type = "legacy"
 url = "https://pypi.douban.com/simple"
 
 [[package]]
+category = "main"
+description = "Timeout context manager for asyncio programs"
+name = "async-timeout"
+optional = false
+python-versions = ">=3.5.3"
+version = "3.0.1"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
 category = "dev"
 description = "Atomic file writes."
 name = "atomicwrites"
@@ -54,7 +130,7 @@ type = "legacy"
 url = "https://pypi.douban.com/simple"
 
 [[package]]
-category = "dev"
+category = "main"
 description = "Classes Without Boilerplate"
 name = "attrs"
 optional = false
@@ -100,6 +176,19 @@ url = "https://pypi.douban.com/simple"
 
 [[package]]
 category = "dev"
+description = "Specifications for callback functions passed in to an API"
+name = "backcall"
+optional = false
+python-versions = "*"
+version = "0.1.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
 description = "Modern password hashing for your software and your servers"
 name = "bcrypt"
 optional = false
@@ -129,7 +218,7 @@ type = "legacy"
 url = "https://pypi.douban.com/simple"
 
 [[package]]
-category = "dev"
+category = "main"
 description = "Foreign Function Interface for Python calling C code."
 name = "cffi"
 optional = false
@@ -275,6 +364,19 @@ version = "2.6.1"
 asn1crypto = ">=0.21.0"
 cffi = ">=1.8,<1.11.3 || >1.11.3"
 six = ">=1.4.1"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Better living through Python with decorators"
+name = "decorator"
+optional = false
+python-versions = ">=2.6, !=3.0.*, !=3.1.*"
+version = "4.4.0"
 
 [package.source]
 reference = "douban"
@@ -499,8 +601,34 @@ category = "dev"
 description = "IPython: Productive Interactive Computing"
 name = "ipython"
 optional = false
-python-versions = "*"
+python-versions = ">=3.5"
 version = "7.5.0"
+
+[package.dependencies]
+appnope = "*"
+backcall = "*"
+colorama = "*"
+decorator = "*"
+jedi = ">=0.10"
+pexpect = "*"
+pickleshare = "*"
+prompt-toolkit = ">=2.0.0,<2.1.0"
+pygments = "*"
+setuptools = ">=18.5"
+traitlets = ">=4.2"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Vestigial utilities from IPython"
+name = "ipython-genutils"
+optional = false
+python-versions = "*"
+version = "0.2.0"
 
 [package.source]
 reference = "douban"
@@ -527,6 +655,22 @@ name = "jdcal"
 optional = false
 python-versions = "*"
 version = "1.4.1"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "An autocompletion tool for Python that can be used for text editors."
+name = "jedi"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "0.13.3"
+
+[package.dependencies]
+parso = ">=0.3.0"
 
 [package.source]
 reference = "douban"
@@ -590,6 +734,19 @@ type = "legacy"
 url = "https://pypi.douban.com/simple"
 
 [[package]]
+category = "main"
+description = "multidict implementation"
+name = "multidict"
+optional = false
+python-versions = ">=3.4.1"
+version = "4.5.2"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
 category = "dev"
 description = "Optional static typing for Python"
 name = "mypy"
@@ -598,7 +755,7 @@ python-versions = "*"
 version = "0.701"
 
 [package.dependencies]
-mypy_extensions = ">=0.4.0,<0.5.0"
+mypy-extensions = ">=0.4.0,<0.5.0"
 typed-ast = ">=1.3.1,<1.4.0"
 
 [package.source]
@@ -718,6 +875,49 @@ url = "https://pypi.douban.com/simple"
 
 [[package]]
 category = "dev"
+description = "A Python Parser"
+name = "parso"
+optional = false
+python-versions = "*"
+version = "0.4.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Pexpect allows easy control of interactive console applications."
+marker = "python_version >= \"3.4\" and sys_platform != \"win32\" or sys_platform != \"win32\""
+name = "pexpect"
+optional = false
+python-versions = "*"
+version = "4.7.0"
+
+[package.dependencies]
+ptyprocess = ">=0.5"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Tiny 'shelve'-like database with concurrency support"
+name = "pickleshare"
+optional = false
+python-versions = "*"
+version = "0.7.5"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
 description = "Python Imaging Library (Fork)"
 name = "pillow"
 optional = false
@@ -768,6 +968,37 @@ url = "https://pypi.douban.com/simple"
 
 [[package]]
 category = "dev"
+description = "Library for building powerful interactive command lines in Python"
+name = "prompt-toolkit"
+optional = false
+python-versions = "*"
+version = "2.0.9"
+
+[package.dependencies]
+six = ">=1.9.0"
+wcwidth = "*"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
+description = "Run a subprocess in a pseudo terminal"
+marker = "python_version >= \"3.4\" and sys_platform != \"win32\" or sys_platform != \"win32\""
+name = "ptyprocess"
+optional = false
+python-versions = "*"
+version = "0.6.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
 description = "library with cross-python path, ini-parsing, io, code, log facilities"
 name = "py"
 optional = false
@@ -793,6 +1024,22 @@ type = "legacy"
 url = "https://pypi.douban.com/simple"
 
 [[package]]
+category = "main"
+description = "Python interface for c-ares"
+name = "pycares"
+optional = false
+python-versions = "*"
+version = "3.0.0"
+
+[package.dependencies]
+cffi = ">=1.5.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
 category = "dev"
 description = "Python style guide checker"
 name = "pycodestyle"
@@ -806,7 +1053,7 @@ type = "legacy"
 url = "https://pypi.douban.com/simple"
 
 [[package]]
-category = "dev"
+category = "main"
 description = "C parser in Python"
 name = "pycparser"
 optional = false
@@ -906,7 +1153,7 @@ six = ">=1.10.0"
 wcwidth = "*"
 
 [package.dependencies.more-itertools]
-python = ">2.7"
+python = ">=2.8"
 version = ">=4.0.0"
 
 [package.source]
@@ -1263,6 +1510,24 @@ url = "https://pypi.douban.com/simple"
 
 [[package]]
 category = "dev"
+description = "Traitlets Python config system"
+name = "traitlets"
+optional = false
+python-versions = "*"
+version = "4.3.2"
+
+[package.dependencies]
+decorator = "*"
+ipython-genutils = "*"
+six = "*"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
 description = "a fork of Python 2 and 3 ast modules with type comment support"
 name = "typed-ast"
 optional = false
@@ -1276,11 +1541,27 @@ url = "https://pypi.douban.com/simple"
 
 [[package]]
 category = "dev"
+description = "Type Hints for Python"
+name = "typing"
+optional = false
+python-versions = "*"
+version = "3.6.6"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
+category = "dev"
 description = "Backported and Experimental Type Hints for Python 3.5+"
 name = "typing-extensions"
 optional = false
 python-versions = "*"
 version = "3.7.2"
+
+[package.dependencies]
+typing = ">=3.6.2"
 
 [package.source]
 reference = "douban"
@@ -1366,6 +1647,23 @@ type = "legacy"
 url = "https://pypi.douban.com/simple"
 
 [[package]]
+category = "main"
+description = "Yet another URL library"
+name = "yarl"
+optional = false
+python-versions = ">=3.5.3"
+version = "1.3.0"
+
+[package.dependencies]
+idna = ">=2.0"
+multidict = ">=4.0"
+
+[package.source]
+reference = "douban"
+type = "legacy"
+url = "https://pypi.douban.com/simple"
+
+[[package]]
 category = "dev"
 description = "Backport of pathlib-compatible object wrapper for zip files"
 name = "zipp"
@@ -1379,100 +1677,119 @@ type = "legacy"
 url = "https://pypi.douban.com/simple"
 
 [metadata]
-content-hash = "2d3531a5a33c7bdedfdb65ed1d224a77342eacddc7296e83cb00891099f1414e"
+content-hash = "5cfb39c13253342b74db3806d2ee51517375cdd75cf891addb3694b2c46ba4cc"
 python-versions = "^3.7"
 
 [metadata.hashes]
-alabaster = []
-asn1crypto = []
-"aspy.yaml" = []
-atomicwrites = []
-attrs = []
-autoflake = []
-babel = []
-bcrypt = []
-certifi = []
-cffi = []
-cfgv = []
-chardet = []
-click = []
-click-completion = []
-click-didyoumean = []
-colorama = []
-coverage = []
-crayons = []
-cryptography = []
-django = []
-docutils = []
-entrypoints = []
-et-xmlfile = []
-fabric = []
-flake8 = []
-flask = []
-gunicorn = []
-identify = []
-idna = []
-imagesize = []
-importlib-metadata = []
-invoke = []
-ipdb = []
-ipython = []
-itsdangerous = []
-jdcal = []
-jinja2 = []
-markupsafe = []
-mccabe = []
-more-itertools = []
-mypy = []
-mypy-extensions = []
-nodeenv = []
-numpy = []
-openpyxl = []
-packaging = []
-pandas = []
-paramiko = []
-pillow = []
-pluggy = []
-pre-commit = []
-py = []
-pyasn1 = []
-pycodestyle = []
-pycparser = []
-pycrypto = []
-pyflakes = []
-pygments = []
-pynacl = []
-pyparsing = []
-pytest = []
-pytest-cov = []
-pytest-html = []
-pytest-metadata = []
-pytest-sugar = []
-python-dateutil = []
-pytz = []
-pyyaml = []
-requests = []
-shellingham = []
-six = []
-snowballstemmer = []
-sphinx = []
-sphinxcontrib-applehelp = []
-sphinxcontrib-devhelp = []
-sphinxcontrib-htmlhelp = []
-sphinxcontrib-jsmath = []
-sphinxcontrib-qthelp = []
-sphinxcontrib-serializinghtml = []
-sqlalchemy = []
-sqlalchemy-stubs = []
-sqlparse = []
-termcolor = []
-toml = []
-typed-ast = []
-typing-extensions = []
-urllib3 = []
-virtualenv = []
-wcwidth = []
-werkzeug = []
-xlsxwriter = []
-xlwt = []
-zipp = []
+aiodns = ["md5:3e121f9eb7ef3ba3556ba7ec28c6f63a", "md5:b4af9a69eb23a8c4a99db9b1bdfb2014"]
+aiofiles = ["md5:5b91c789d9f91542ced731a5dadd33d8", "md5:cb33cf96c371fbd56fc27ab0bd81bd61"]
+aiohttp = ["md5:089d546f24101b1b116a27780c7786f7", "md5:143cf0610d720e4db6fb83aeb5209b2a", "md5:27fa1136ab66c058a309ad71c7e047c2", "md5:3104ff1fa055e7913cf07e8cabc27261", "md5:3d77ea2bd34ed61c824786150b388164", "md5:3e617939b53bf0261e5102b27a3febe6", "md5:42de1baa009ad0263ba455f3e4c010a8", "md5:492adf005eed4eae21b9b67154bffa9f", "md5:5536152af71471533fd3680658459235", "md5:56b1d4207922988c910e8c908de3487b", "md5:7ee91162450ed06f2b12ee8bf24c8e11", "md5:856a31cf15c4c91176d4197586cbd09e", "md5:85fe5c9037256c58d4678148bd91b3f3", "md5:945f4ef71f7e9952f408aa25592f06a3", "md5:a5dd0f63344c6a3ba06ea9e4827cbb22", "md5:bd7ceef98b92af47db2ce1a951319d99", "md5:c369153e23c52fdc19afd09639b3892f", "md5:d018e4fa6239299d669a6d033b8c6212", "md5:da1ccf3a204e7b693f5a587ffd34f7a2", "md5:de23fa96659f9835e5258c553998ccb9", "md5:ef2512ad36fdaa20b86ca1ed7749dde9", "md5:f7b836f5ebe11be2e3960303fc7a920e"]
+alabaster = ["md5:3591827fde96d1dd23970fb05410ed04", "md5:6487fd5054a3eece3a6b96bda83d97b2"]
+appnope = ["md5:932fbaa73792c9b06754755a774dcac5", "md5:a73064be99839b9534b4da47a16c9c46"]
+asn1crypto = ["md5:1060a0dfb21580c901c5092dddbc76d7", "md5:de3520426e81a6581352d4366f310eb1"]
+"aspy.yaml" = ["md5:541af01e509ee3d0caabcec39a9d3a26", "md5:8151e2c765bb2dedcf226a35769bced4"]
+async-timeout = ["md5:17e95b1778c2c32036bcc5664e815ab8", "md5:305c4fa529f2485c403d0dbe14390175"]
+atomicwrites = ["md5:793e602b383d2f4a86d3c410053c0ccd", "md5:ce11f780a4ce0fce8a55d64494a88178"]
+attrs = ["md5:2be7bce157988928f5ff2bb50a0b510d", "md5:853dff18dd0f6cf4e9abc357e9df6e17"]
+autoflake = ["md5:a47a486f5e669444547ff3d2a34c38f6"]
+babel = ["md5:9989ee4e3e12def96e4aa26d97f147ca", "md5:c384ac03026e8fe6f9b90f55201f1bff"]
+backcall = ["md5:87ce0c7839808e6a3427d57df6a792e7", "md5:b48eb1ad963b0f6ecae0d90434723614"]
+bcrypt = ["md5:0ad02131770f03f56591832f453f635b", "md5:14327ded3610431fcbd5c27887bb559c", "md5:279169e45a5ae69361b8a96cd378758c", "md5:28f5bc321c6411943ac4de18e6e9afa8", "md5:2a80d8f4afd1212407533fb90f449fcd", "md5:2f925896a02e24815c4dfb7d3f8f4166", "md5:337eefffba73eb854661d670658dbce6", "md5:33a8d0863d555efac418b6a513865732", "md5:4236285f171278e76d38bf3096c2190b", "md5:4d8ab82e5e0c86b15f4ba5aff2bec6b5", "md5:4fbecb79441eef87fe351c612f3d2154", "md5:523b1f89a8e68b82acb7f51f459723c0", "md5:7c66dc342c4629f22ab5038cc7f9109a", "md5:7f2d3187e8740f62a1ab5e05b8d4ed05", "md5:8efbb4e540962ca56b08394062567399", "md5:c19817ed8503d0cf896cfa23d31981e6", "md5:d124de93ebf3bf63c22fa4491f822a85", "md5:f396a3eeaca501d271787ac1b17b24b9", "md5:f7b7b7154a6fba7e8af0b56cca439d16"]
+certifi = ["md5:5822ed8b08100dbd1273da9545437deb", "md5:76381d19d0a1171fecb2d1002b81424e"]
+cffi = ["md5:098ac2760eb19d44d0088c9c789754b5", "md5:0b6d4c4956d07aff17005a3f4327673c", "md5:11ee230f30a44a6ad59b4b628ad6ea21", "md5:18cba921c759cc9dc9bb6ff1ac4df35a", "md5:1ddf46ad31ebcc915abe0b3286125bad", "md5:33ac53d8f093ec7e1db51bad713b3958", "md5:35ad1f9e1003cac9404c1493eb10d7f5", "md5:393694d881ab4379e17c56f0bb0f4f03", "md5:4e27c690f2a40df27a87ad5d10febef0", "md5:556def5714bf2dd5b7fbeabb0c80f340", "md5:58b4032036269be70260490a856fbd5b", "md5:689e8ea00dcbb5b3073a976cf1ecd5aa", "md5:6b54f86c2efb0984b93a80de95b394ec", "md5:6db1b52a89c1a50bd98cca2517cca1b1", "md5:719f8a496c43d8283aa497a939a19f00", "md5:7b3ab8a425180a74dd3e8441f3a27910", "md5:85e7a90ed8634140aa05de38af504da8", "md5:8763358b2af3e4acd867f462bc0fa89b", "md5:9172bf169dd571c7841ccd08f9a0f47c", "md5:97bb8da457b4705863c3d317553f3382", "md5:996131bf70a7c0beb1a667e797ba4a32", "md5:9fd39797497543bb1224e9171c5311da", "md5:aecd9e3ed32fcbe7e8d9967f9ddb92e2", "md5:b1421f9fb8047dc3b753956ee3344fbb", "md5:b9b1c782e8b21c47845727b58372e8d9", "md5:cf2e3eb23ae7057b24d394a70d873c2f", "md5:ed7040ce4fea4a84bb1c6c91c653ad50", "md5:fd2c7e79bf0ebe97709d6335da9039f1"]
+cfgv = ["md5:1e08f4a1e2438a3ef6d15e8f19468335", "md5:34bec2d6aa6150c0f21282d63e54d885"]
+chardet = ["md5:0004b00caff7bb543a1d0d0bd0185a03", "md5:7dd1ba7f9c77e32351b0a0cfacf4055c"]
+click = ["md5:4de489e31c57834a21b8be7111dab613", "md5:7f53d50f7b7373ebc7963f9ff697450a"]
+click-completion = ["md5:4a427c230961a0bade844c5fbc5c7e74"]
+click-didyoumean = ["md5:08ac34aa0355f58ffc43ee57f1969ffb"]
+colorama = ["md5:d7c988b7a52ec3eb418a99b1128bca07", "md5:f927529cd1735f6f50ee2c61628e9c1f"]
+coverage = ["md5:084ac8d14559f6eab39124acd53d3ea8", "md5:10b284853a6acea002d1f9b3f15f2d9b", "md5:17245030d1575be15efed1a0a083b335", "md5:1f9ab2b51936456d556f79f625b8fcb3", "md5:2562f5c3adfb5551973dd9a84bbbf6eb", "md5:2d7159ef32231ab501d62379d286eade", "md5:4c38c91b2dd9ccb09e64e84e09013a05", "md5:4c5a59577562d5f7e6b4e9c7630300e5", "md5:565c94b23083fb4acbea5230f1a4c693", "md5:56cb6971134f3c665730b5a2de5b215e", "md5:73bfc70102f36a1844924c62ef15df64", "md5:7c79d3d8bf80236b9bfc2118ca2ebdff", "md5:823e3f592c74f3b48b9c218cc2a52948", "md5:8b302f42f38e5d911fa4fedb43c69634", "md5:8dd15f484da8b3088288c8cd72ed881b", "md5:99181c221a5dc8c5b5d1f00c62cf0624", "md5:a07920162661c18326a98455debf485c", "md5:aa464851f478af68a68f56f1f60e5d2c", "md5:ac6ff2f76b73db3474ed92ff50f9c4b0", "md5:aca1aa6450cccbf1c95d2e1dabe49fcd", "md5:b1abd2a3aad9184228874a8372672c1e", "md5:ba6dc394236c569689fc6cf28fde697f", "md5:bef571be166f8c3d04dcf99bf1146f6d", "md5:c0256a107064543b2e300a2dd3d9cf7f", "md5:cd47b76567782b1593e18f60fa3ca559", "md5:cd7a5a26157c7492d64787c031099cda", "md5:d498d2983159c8437c2fcaeff4fd98c9", "md5:df6161644f683cc7f34f86196b8ac820", "md5:f1ebc38404d7c10e65c01a3704091808", "md5:f5b091f2223b14472eeebc858a93d4da", "md5:fb52d0ad122b999ede5d31e5b3b305ce"]
+crayons = ["md5:116d1d095e945d8454383604adee5c0b", "md5:aca6bc2328aad8d5077a1a7d4c214501"]
+cryptography = ["md5:0836c613ca43eb93a29487cdec1e02e4", "md5:0c290db632476436f334c9b1b4c42b0a", "md5:1b1ca7150cddec86425255fdc0d758ae", "md5:1b496ffe05ace1e052bd25061b377df5", "md5:2c81e04ff3ffcfa6d324fd1dae38bbdc", "md5:343a644a0a4f2def990f3eff3d099494", "md5:3a86bdca5ca1013dda82d10ef4de0baf", "md5:401cc8268f89496643da3f7a48eb4e8e", "md5:4346afe9c77cd5d2392ad9f3cb4912c9", "md5:62c7e3ecc34636e73f72d4a294af01a0", "md5:6d096ad70b2f5da6e1e3dbf781e4a53a", "md5:80f6e96a0ca1d523edcd9c1f46ffe6af", "md5:9222b1897ef891f59e07f8c1b03fc0a2", "md5:a6e4da85851f1669740a34032dac7be3", "md5:abfdef63dd1966331fe010739cb03853", "md5:ae3cdc3751c394ba761f23d41698bba7", "md5:b0e030171f092cacb675d4086752292f", "md5:c79163ff691e2833b86811358227eb41", "md5:f01aa67cf0c158ece702e8c81f43db47"]
+decorator = ["md5:a565a98581c0d110bc247323e89df9b1", "md5:ed6d5ddd592e7e75dc3e2b1521104e9e"]
+django = ["md5:3b1721c1b5014316e1af8b10613c7592", "md5:8a2f51f779351edcbceda98719e07254"]
+docutils = ["md5:1d708ae8afa367394e836e6a4c37bdaa", "md5:83231ed2d9b052e3ce6c60128516ddf3", "md5:c53768d63db3873b7d452833553469de"]
+entrypoints = ["md5:c47396b6c43dadc81e25d29b9fac8bd3", "md5:c5c61ea2e46a0c50ea08f4af7955a0b1"]
+et-xmlfile = ["md5:f47940fd9d556375420b2e276476cfaf"]
+fabric = ["md5:3c3a26cac63964047956af9013be54ab", "md5:e9f2dbc92078e23011c21066e5ac5428"]
+flake8 = ["md5:2334686f8cdc17ee6309a351cd5210f3", "md5:fd84dd29950a9da4ab6264ff90e8282b"]
+flask = ["md5:824f0f20aae1f44c9c7dc4054adb7969", "md5:d1d5c106d04d90bba6121d0df5bfee76"]
+gunicorn = ["md5:45d9b5297c52641400c41d1851ba853e", "md5:f581937e9d8569ebd3fd6af1f9ab809f"]
+identify = ["md5:5e94704dcb02e6b86c9bb4429be5a114", "md5:efe9b19fc8a4d377b062be86d2f3a338"]
+idna = ["md5:2e9ae0b4a0b26d1747c6127cdb060bc1", "md5:61392a071e4a3b0f84cd6d71f94f15cc"]
+imagesize = ["md5:2f89749b05e07c79c46330dbc62f1e02", "md5:e2defb5e1f937b87a0ed68868688df21"]
+importlib-metadata = ["md5:71b5a5af71f065bb0e195290fd3d0dcf", "md5:f122aefa69d6ff99a2ebad4dde157fda"]
+invoke = ["md5:084b759c2769a71685761ba9abdb6a35", "md5:4f62f126411fc5177e67180e3cfb8495", "md5:4f8ddb5d81bc2ab7e068c2cabf86dec0"]
+ipdb = ["md5:c20649a1867db5279f802135a377eb9f"]
+ipython = ["md5:401b35829fe424cdde49c65b111bc07a", "md5:dbdc53e3918f28fa335a173432402a00"]
+ipython-genutils = ["md5:5a4f9781f78466da0ea1a648f3e1f79f", "md5:5bf384d999c2e38b696a4d6f162875c3"]
+itsdangerous = ["md5:55179072b7f84ae38f16b3fdca33aa4f", "md5:9b7f5afa7f1e3acfb7786eeca3d99307"]
+jdcal = ["md5:6774eaa33a3e1598450cd209a78624d1", "md5:e05bdb60fa80f25bc60e73e0c6b7c5dc"]
+jedi = ["md5:46c12589de9df839ff6be79c5009766d", "md5:587570fbb52ae91b53686f4439da3684"]
+jinja2 = ["md5:0ae535be40fd215a8114a090c8b68e5a", "md5:93ca8152bf9ca03214158a49d542402f"]
+markupsafe = ["md5:01e8f1759663535a494b0098c29bb39c", "md5:0f388d7e5e6ec5d5f32d18c83b7ef20d", "md5:1311d25a26d399bafe9f906f1e32cfb2", "md5:1440d3b8263d60b91d8185069be4302c", "md5:21d5f565a0ad798888a29e6344b454e0", "md5:4359c5ddfd8adafcc008d8080b245ac3", "md5:43fd756864fe42063068e092e220c57b", "md5:48d3bb7778533e2afb13bb6f2102635c", "md5:4a06edd1025c0939f7ae3c03f8d12c15", "md5:4b0b7116eb725fa9bca011bc7ad41c8b", "md5:58c2831fdcec66ef5c770ff4a9171479", "md5:5a8c2ae810dbbfc30938dcc5626be7fb", "md5:61aaa3e48888afbd2c25edd57dbdb17a", "md5:65e14c2f3e5d956ee5b6dd5bf3ea5a2d", "md5:6662480771cfe527182b5e1e610c291e", "md5:6c1b3183669011c54f6d26309b6f4562", "md5:743c64b4cdcb00233faf6696be732a67", "md5:77f6f9539e7d334066edfa54964d43cd", "md5:7b57475db9e376a94b19d63bd7417d54", "md5:91da0fab436b2165e03188083ea17e0f", "md5:a59779772929176978e53af881eabaab", "md5:a948c70a1241389d7120db90d69079ca", "md5:c937b3654640ee5864f2917bf24a7ad2", "md5:ce9334cb93c3fb155b6395458935ad61", "md5:e067ad66455299548fc7e96054cd6ff7", "md5:eb5bab451b3e4c729be0c7b9549e8bd9", "md5:f57d2a0fdb09f238da2bf31c964a6142", "md5:f583660da733f0dae2ec00e38a35481c"]
+mccabe = ["md5:6afffd590703262843327af8c4051928", "md5:723df2f7b1737b8887475bac4c763e1e"]
+more-itertools = ["md5:8578a4936e6c46e17bfe9dfada2d2caa", "md5:c5a9cf0d9c3cfe952a4ed9b3175dae0d"]
+multidict = ["md5:017556f5818283886b6fd1bbb622eaad", "md5:0d1776e47aaf3de3fce4cec5779f6114", "md5:102d070eb9be4b76a3508eaaa296806e", "md5:11cc1d5caa6944171473640c7525ae07", "md5:1ecdbb985c8ec20b656219a857bab6f1", "md5:2c1373477cdf56555448fcba0510cb78", "md5:2f31903235a243fc450480a21cfc61f7", "md5:35867a064e1209da9994e3f2642473ae", "md5:36cdaa5ae561216e815fd31c105c3357", "md5:3c38040441fa69e59a2f65306f74595b", "md5:48a3b43532f0d877d09764211bfae1e4", "md5:4a2a2ead50c7f7e377b0efe6a899778e", "md5:4d892eac9fd0e210962cd7eecf996cfb", "md5:5c14c70d41debf5f631a8260d8ba9d17", "md5:5e9d8f7e1ada9a22932aed6a72f88e43", "md5:69ccfa859da6c39d09c4350ec45c1008", "md5:6b7580a391106c32699063d63dc142d2", "md5:8261e67c2d91d0028cedcc516842a41a", "md5:88e260e98733030e19a5ee671431a0df", "md5:896746b928cb8cca708c0dc3fcd22cd6", "md5:99775ff576f1854eae7ec486cc0f4c71", "md5:ab11dc2a73f0d68c3b8e724dda044f53", "md5:b047a725933461d9c99aaae7b5c8f892", "md5:be62e3a98942ffc57d5e12c7d631e74e", "md5:c2a5c8cdfde3734a80e0c49af971a00d", "md5:c60fb7eb79d04233b6045e448dab5e5f", "md5:d45577c22c22cfd3319ad7f2387356bb", "md5:ed478deec536a3573c9da46b0229f1f8", "md5:f9beb519b7ef16ef2e4266456d47a5e0"]
+mypy = ["md5:0256d3f662f7053a6d236ff4a2a71d4d", "md5:38db7f77f8deba1527254b7dd0eb8a9b", "md5:7022ec9b32891ad3e2395fefbb3aae9a", "md5:76fb7431ed4bb01614d3bab6869ecc27", "md5:84603069354f16a0e1e4fe1842fedbeb", "md5:9b3389b51da7f21fdf9b26e1e3d241cb", "md5:a33703db40a032beec596ca3a7287828", "md5:b197021cef806bcbc8c35c88732ffcca", "md5:bf9ea9d56a6fd039d5cb3c5e84735732", "md5:d3e9a985be22576d92f644f2c2adbb42", "md5:eef7ee7d1dd2fbe2baabda47aea2a189"]
+mypy-extensions = ["md5:50b3d1fe9a2a0dcc9c87753eece04097", "md5:d14d945e5c54e7a61607e00fcfdbbcd5"]
+nodeenv = ["md5:6c43a4c929985e946730dc127f15ecaa"]
+numpy = ["md5:00594b150e69d1776164ffa60d7fdc01", "md5:1854757b3e127614ae01b0b814762f5c", "md5:370ec58a5fdfe9e7ffe90857577806c6", "md5:453f5996ac600c4085656e82005fb0e5", "md5:4e907ac7d841018c0a9130ca45d099ee", "md5:7039dd60e2066e8882149a8b8bd6cf2f", "md5:773f9e76235ab5edd9ef1c083e62ea9f", "md5:7add5c07a1679bfc086d5575be26ccc6", "md5:88c1e91c6bd3626278b7938f12cafbe2", "md5:91900b9172e39c039326c56cf0149e15", "md5:93a2a4b48f160ffd1bdd30023b842be2", "md5:98fb024d8d63f056ef7c82e772c4bfa0", "md5:9ba2467b05eb4471817509cabff1b9a6", "md5:b06d87509a2228c5952096cb11c8b007", "md5:b23b0727562be62ffd943c7828822da9", "md5:bd3c27deac470bce5edf6936d08966b8", "md5:c03c7365b58deefd03e3c080660d7157", "md5:c6ab529b105181fc846a8245e5e4d048", "md5:c7e8e9f9ded13b1356e72cd8506df224", "md5:cab84884fba39fbd352550896bf22bfd", "md5:d2b8da12f0855765e9cd3cc49d9885b9", "md5:ec4f2fd2180fd68647f38a0d4c331dcf", "md5:fe3421cbae83004e7feca4d90043e9df"]
+openpyxl = ["md5:d4d1baeea989bdd2e0b415e9d3cc442f"]
+packaging = ["md5:5d7eced24d2cfe7ea57491da74d739cb", "md5:dd118dc389f8e90840d44240292bf3d9"]
+pandas = ["md5:119cd91624b878cb172f0b90f590ee83", "md5:148a3e53ce22c1db5d9e6dd4c5e2eacd", "md5:42fdbd0825eca9368932510ac4842fd1", "md5:64d97007b56da50a03b45670b1b8d299", "md5:6640de14a934a701129b635c6d75801d", "md5:6903fef2faf6651686da861a2ccc9b07", "md5:759e7acbb5444263dd30eb9704c321bf", "md5:81fbd485053c25121725c1d665d505c0", "md5:826638d57ef787815c3a76b46bdeb3d6", "md5:83437cc2e0d5911924b74b5ee74f002a", "md5:9a096c0d86018bd8805ce7a9989de5e3", "md5:a520dcf297af638ab9aa82de364bf789", "md5:bcbb42ecdcbee64e96776e60636735c3", "md5:c543dac70061e1e21e9ed674fabe1b0b", "md5:ddca9151e4c4521bc296299197e0e6a6", "md5:ea2756c02ab0466271262b3ac4225305", "md5:ec03c8accca27467edf8cbb194fb2819", "md5:efb58165eded80f926cc8238f62e5d70", "md5:f8847fca17556f07a809e10a6b0a3fbe", "md5:f89b66d78fa3a5418c7c555c55dd01a3"]
+paramiko = ["md5:51fbe4266c624e4f7c49e1304f038ec3", "md5:a476ea106177fe22e797428d54811aed"]
+parso = ["md5:2ade6b152c194ab6a3d9bc7ef65b9266", "md5:6b392de67187d9f6bd2635d4bb4b52b8"]
+pexpect = ["md5:dbae6a4ef07ab6219963d21ce7dded90", "md5:ed003242cbf308aee1b1eaecdef59e43"]
+pickleshare = ["md5:44ab782615894a812ab96669a122a634", "md5:7c68934703b75ccfbaad00d1210f7011"]
+pillow = ["md5:044049b724596fe62025c71b6b1c88a6", "md5:1a4f6f39dfbefda746780c6c8e982040", "md5:24d722b78b2a73ea2d170a731fe1eb9f", "md5:30a3758316719295caeb63367f030fde", "md5:3476d551507d2ec80c99b47af2c5f4a8", "md5:73e35f0f33bd05410215e81cf04c967e", "md5:771e33129787a7d2c03aa8ea0067e757", "md5:7902678b3ba470e06d61114ef25997e5", "md5:7b2e26fb676ef02ca5ccc83e51316f1b", "md5:910bd2521bcbb70fbf601ed68115516a", "md5:941fc9caf9865068e2afdae7cebe2ebc", "md5:9c50e7182b01458b9d649be4953f8648", "md5:9da5d2db0d7604ba553ece1ab7ca53a3", "md5:a7ba8b2604375425fa5ae9601d0b18fc", "md5:b936161097012a661d83b0524e42cec0", "md5:c358af4427350e9d8de31f3bf15aa1d7", "md5:c614130fde7338ef3f089009b29f290b", "md5:c630606d82d542c6ceae9810d2455f47", "md5:c73a645fb7f6340bb630cf351695ac89", "md5:c76f43cdab16712c498631076bc07136", "md5:cbc5756ea1d6a826f7645d4ae0b4e44c", "md5:d074036ec27e2ae3cee20adf99f9aebe", "md5:e426e5f06527e1b194cc3ca9b2ec5def", "md5:e59c6463f75ec48274d60054775a4559", "md5:f21112bf577aa0dfb0f0c713e16e76c7", "md5:fb573595113dce69b2b1a3d8839be066"]
+pluggy = ["md5:2286ac6c9cb085021e4308b1f81af5c7", "md5:4ecc4352e5a2760e126bba8c13c062d5"]
+pre-commit = ["md5:316ee18793471515ed63586ed2115572", "md5:31ad6ece692afa3512b3e323ebd13180"]
+prompt-toolkit = ["md5:091daddeec62015e0be36e8682d36562", "md5:ba1ef8caea51dad9f1cbac7f8d4eb0c2", "md5:cc73a92ca76c9592576d3c78c3baf964"]
+ptyprocess = ["md5:37402d69f3b50913d4d483587bffad8f", "md5:a4cbaebd8f353a9803a1da9d8484c272"]
+py = ["md5:d9e30436ce7e79f30847f9b30b62e149", "md5:daca50cf07cb09cae0469c9f6ea5272a"]
+pyasn1 = ["md5:680da4680a8257bbe976cec9053f7a6d", "md5:f3c0cfbf882a20811be5ad5a41f74b82"]
+pycares = ["md5:0011944a16f96d74ba078ab912768eec", "md5:20017506ee15ae08bf8f0248a8252a51", "md5:2e3b0dde0fe3d948de3093dc50670777", "md5:795793e35d9deb70c54fc6e670a3dab7", "md5:85e8e208aa59f87bc41c35558d6f2756", "md5:8a53781dd26db01ffe0b3358877bebbd", "md5:a3d08d6b4a4fafcc3509db4a43895351", "md5:b1fd07a0f1c342a802e006d8cdfde52d", "md5:c814adec4da706861278a27b522f430d", "md5:dfe9cefc2baca57f5030cae4448f02cd", "md5:ecc7834fe95079e7f486718eb7eb33aa", "md5:ef4e384b8d1dc222f853e7cff78e4423", "md5:fea6751159ac24800ceae6137faa3a95"]
+pycodestyle = ["md5:2a88d00ad18eabab3bff2ad1f493bc59", "md5:40e7a76f364a18f531aaba11a4476e21"]
+pycparser = ["md5:76396762adc3fa769c83d8e202d36b6f"]
+pycrypto = ["md5:55a61a054aa66812daf5161a0d5d7eda"]
+pyflakes = ["md5:727fedbb2913024e1d66de4bf17d827a", "md5:a0f71a15724e553c46e03ba5ed56703c"]
+pygments = ["md5:a5095f15bdebf6faafa8efc9f49b5e9c", "md5:eef3f0743997d4d1becda224e650b551"]
+pynacl = ["md5:074fb13a222e2a65e0def4919b087376", "md5:078231bf5ffaf46ea3dd1e7d4efcaf80", "md5:2ab0256a1c8f3ab37e61488b5488a522", "md5:3328f4d61a4bfd1de8e2710a45ac2698", "md5:3f3b1272287bc2de8efd8a5fa18bf728", "md5:454f5816471e281d12606a1beaf09e65", "md5:4e02b2400837b8d29f4203222870e905", "md5:5738a90672a606e5908006a709167e57", "md5:585f7bb52a53ca9769cafc84f93aa12b", "md5:59ca9a8bc48f1ec4fb035c00b4f5d236", "md5:62658961bbc273bddc1b62a9d3510013", "md5:6986740050ebd54af8524c6748a9eeae", "md5:7208602728b0c2dab40271d6c1ffbc81", "md5:8fa23a6103eb0db3ab15f4c23f74a2e1", "md5:95a5cf42712c75f9a56d13b8b065683e", "md5:97377be9592dfbf95b7f8b1ae24df09f", "md5:a671295c9915ec06c55dcddf2bc23ec2", "md5:d7ad9460931bbbf133c9c6d7d6cfdba8", "md5:e4f6bf35e52a57c43f6088ca1247ab53"]
+pyparsing = ["md5:0a90ca524ce3ba201be4b80e21ae7c3b", "md5:e534c0ca755155823bf45fdd8d084922"]
+pytest = ["md5:15409c9e9bb413c4950b91e628c34dbe", "md5:7d8020aab01383466da2a1aeaec5351d"]
+pytest-cov = ["md5:053bc1570960cbc41810cf00997e3995", "md5:9c3adf39cf0b0516d721f2764511c159"]
+pytest-html = ["md5:2d5347ea7cf12a22d569f1507dc05947", "md5:613e96ed700524497c8f977825c2431a"]
+pytest-metadata = ["md5:349315811c24784fe0a6953376ca1479", "md5:95674c2390b58e0138cabac5101d1908"]
+pytest-sugar = ["md5:b9d03cad8eba9b032e98ff9c9ce54417", "md5:cc2ca2b83c44a960c884bc2a576883e9"]
+python-dateutil = ["md5:33bfcff39e89f7c1c26a6bd9af54901c", "md5:354db28843d949f1bc3e49e8458e22df"]
+pytz = ["md5:8b2860a161bfb0a6165798b1a2d8c40c", "md5:9494cbd701404080e83cbb316e692891"]
+pyyaml = ["md5:0b7e76d06b4dc17e48e7e395aa609ecc", "md5:193b162c597796a29bad3b2f5b4f514b", "md5:1fa07df3251ab548fb49b3bec71d29fc", "md5:3b07eb596071bac75c886129de881d22", "md5:609821d6b526623cedaf8176b295b276", "md5:63614eec400c7bc2bf04e0b0a246b9e5", "md5:8de9d396c85f4d516c09afd60e48bb52", "md5:90f43037837dfb881165a843d5c30aea", "md5:a5b0eb59e136d9ae8d5eed313c82565f", "md5:c08d3d08e8772b477b140312e3c05778", "md5:d58fc84a007f476d6c78c47734da85f1"]
+requests = ["md5:d5327a0023c190febb7e2f491d5ca905", "md5:ee28bee2de76e9198fc41e48f3a7dd47"]
+shellingham = ["md5:00a61f6542ccde7434f88266d9ef580d", "md5:0cc72af83bc2e41934d6bfcf820b0c26"]
+six = ["md5:9ae5d1feed8c0215f4ae4adcd9207fcb", "md5:b0dc15d494e2d6e6c19cbbe482e91c5d"]
+snowballstemmer = ["md5:198b60fa6a36d22c6c6f0b9304c6a40b", "md5:643b019667a708a922172e33a99bf2fa"]
+sphinx = ["md5:26541cc264bb679969e17a0b2469475a", "md5:9ea5158901e45b687c257f2fcf08c32a"]
+sphinxcontrib-applehelp = ["md5:098c7bd28ba940494ffd3bb92c0b55e1", "md5:c3424507cc28291f8005081b6a96afb1"]
+sphinxcontrib-devhelp = ["md5:173ea18c7831cd8595c1b02f16e3935b", "md5:ecb33259e2e8300493d210140af7d957"]
+sphinxcontrib-htmlhelp = ["md5:008b2ef1b3bec24c97164721e4e50892", "md5:f72e4b26ec0f6387d855c74819500b66"]
+sphinxcontrib-jsmath = ["md5:4a9dbd97819fa713147472387ebd845d", "md5:e45179f0a3608b6766862e0f34c23b62"]
+sphinxcontrib-qthelp = ["md5:3532d4643d0b1cc3806e43f59495c030", "md5:471b12b9a612717671627a37ba822b06"]
+sphinxcontrib-serializinghtml = ["md5:1d88f23e5e0eb7c3fc37e81391cbeda2", "md5:6a4318d6d11c345fbc669e6a86f32766"]
+sqlalchemy = ["md5:f1902c174981e363a7fbb9f6c8d932c6"]
+sqlalchemy-stubs = ["md5:0cf5bdafc5115fa49f0a3cf50129ba76", "md5:ad6dd6126e48e1f84fd4aa970c7dbd23"]
+sqlparse = ["md5:19aaa5c1cdb4fcae4fd0717f104c524d", "md5:2ce34181d6b7b234c9f3c0ecd1ffb93e"]
+termcolor = ["md5:043e89644f8909d462fbbfa511c768df"]
+toml = ["md5:63fffbe2d632865ec29cd69bfdf36682", "md5:70f2a3ce1fc099c20702b55f44f0b130"]
+traitlets = ["md5:3068663f2f38fd939a9eb3a500ccc154", "md5:ed8d701989c74fe1984114f3bcab7f98"]
+typed-ast = ["md5:06bd325a9fa18ead28a16afc5c97d62c", "md5:1930a3add95ed8ccb53ad68803d254b7", "md5:1b66b650fa83065db2de4d7d4b8c4937", "md5:22d3594c2b4e0314dccebd1c95836703", "md5:304566abe13feda39cd306a624e706ab", "md5:3ac9f230aa6fe3afbac099fcb5bbf701", "md5:65b4b713e757910d96e419bbe38f2d68", "md5:6d69d5c476bf08028f515bd8c0c92c02", "md5:6fd9da7d001906e15a13dd109a26d8cd", "md5:7f403a7a597020d2c01557f15b51e202", "md5:881222b6d77750b56a8bee557e5ca4bb", "md5:aa5e78cf5350b2e15e7729699baa157b", "md5:ba5ce94e7078e17e251ca73f2ce957eb", "md5:bdaae16bd0c69b4cd30657605df679e7", "md5:c335a3a54e3c7d0a5596690c37c7dff3", "md5:cdda1078ef97594e82dcc3402b3038a6", "md5:d3c81436e38292d9bccbb8da60be424c", "md5:e7f8cfcb0ccd84ddc9bc5d562d5d9c9a", "md5:ebfb83d0ee70a9c0fee850a3b4c1fb7f"]
+typing = ["md5:0c84fda6fd4303fa6aee13a36ea62897", "md5:64614206b4bdc0864fc0e0bccd69efc9", "md5:7e50dcc98a528f47c8793c980128467c"]
+typing-extensions = ["md5:33815f263f3e00ec63b9d9d26eea95de", "md5:7b265f15d4eed8d014f8db21263c5bb5", "md5:7fd2d0a56096e1e6c81d61727f7176cb"]
+urllib3 = ["md5:1ebfbbec8bee21dbb686c009b37f4963", "md5:6b9abd70cf0ec189a30f3bb979fdb73d"]
+virtualenv = ["md5:09914450d5a356fbd47f35e87fe09db4", "md5:55b8d77a83d0141abaee55542d5941e9"]
+wcwidth = ["md5:9fb9f073e3560424296f3f2c745beac3", "md5:b3b6a0a08f0c8a34d1de8cf44150a4ad"]
+werkzeug = ["md5:abd0838797100e25fc87bdd63f3c0470", "md5:c0dfc8b685d2a9912d500d3fa8a1d60b"]
+xlsxwriter = ["md5:0ce8276af1672f8786b17c84ae01858d", "md5:42b7cd6a6b8ec700bc8de2345e4dd261"]
+xlwt = ["md5:085e6a73f9bffa8de4abd2c131b8afd5", "md5:4b1ca8a3cef3261f4b4dc3f138e383a8"]
+yarl = ["md5:15bedbe45a436d83cc0b277fb87a0081", "md5:16878541f5655dad54a052125be1f38b", "md5:237ddddd442930f717565d11a19560eb", "md5:3d7ee60269cbcc23d2f0a3f5a5482840", "md5:467b5853b49a1900fba66e277a0b82c6", "md5:723087a3b45d731588d7e281b731036d", "md5:8b9d2dc4a4ef06b322be7e933ae1d525", "md5:92889c31fce4c8f82b7ee9c2b2ed9cd1", "md5:a8a884f38cf464da0889f82676d40dda", "md5:e7d532e71090bd38ec6f105e56aa162f", "md5:e8186a0499eb0e1bd2bbbb25e24c2f7e"]
+zipp = ["md5:45286cd2f2e0c3423b4e18a863d3b84d", "md5:9db42fa98fe4b1f4f8e228b23932e8b6"]

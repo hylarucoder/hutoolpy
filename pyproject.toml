@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "prevenger"
-version = "0.0.5"
+version = "0.0.8"
 description = "final commom utils for prevengers"
 include = []
 authors = [
@@ -26,6 +26,9 @@ click_didyoumean = "^0.0.3"
 crayons = "^0.2.0"
 click_completion = "^0.5.1"
 sqlalchemy = "*"
+aiohttp = "^3.5"
+aiofiles = "^0.4.0"
+aiodns = "^2.0"
 
 [tool.poetry.dev-dependencies]
 ipython = "*"

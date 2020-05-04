@@ -4,6 +4,7 @@ import pytest
 @pytest.fixture
 def setup_math():
     import math
+
     return math
 
 
@@ -17,7 +18,7 @@ def setup_function(request):
 
 
 def test_func(setup_function):
-    print('Test_Func called')
+    print("Test_Func called")
 
 
 def test_setup_math(setup_math):
@@ -26,7 +27,7 @@ def test_setup_math(setup_math):
 
 class TestClass(object):
     def test_in(self):
-        assert 'h' in 'hello'
+        assert "h" in "hello"
 
     def test_two(self, setup_math):
         assert setup_math.ceil(10) == 10
@@ -41,10 +42,13 @@ def test_mytest():
         raise_exit()
 
 
-@pytest.mark.parametrize('test_input,expected', [
-    ('1+1', 2),
-    ('2*10', 20),
-    # ('1==1', False),
-])
+@pytest.mark.parametrize(
+    "test_input,expected",
+    [
+        ("1+1", 2),
+        ("2*10", 20),
+        # ('1==1', False),
+    ],
+)
 def test_eval(test_input, expected):
     assert eval(test_input) == expected
