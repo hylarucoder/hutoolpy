@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "prevenger"
-version = "0.0.8"
-description = "final commom utils for prevengers"
+version = "0.1.0"
+description = "A set of tools that make Python tasty"
 include = []
 authors = [
     "twocucao <twocucao@gmail.com>"
@@ -26,44 +26,33 @@ click_didyoumean = "^0.0.3"
 crayons = "^0.2.0"
 click_completion = "^0.5.1"
 sqlalchemy = "*"
-aiohttp = "^3.5"
-aiofiles = "^0.4.0"
-aiodns = "^2.0"
-pydantic = "^1.5.1"
+black = "^19.10b0"
 
 [tool.poetry.dev-dependencies]
 ipython = "*"
 fabric = "*"
 gunicorn = "*"
 flask = "*"
-pycrypto = "*"
 pillow = "*"
-
 pandas = "*"
-
 xlsxwriter = "*"
 xlwt = "*"
 openpyxl = "*"
 
-django = "*"
 ipdb = "*"
 
-sphinx = "*"
-autoflake = "*"
 coverage = "*"
 "flake8" = "*"
 mypy = "*"
 
 pytest = "*"
 pytest-cov = "*"
-pytest-html = "*"
-pytest-sugar = "*"
-sqlalchemy-stubs = "^0.1.0"
 pre-commit = "^1.16"
 
 
 [tool.poetry.scripts]
 prevenger-cli = 'prevenger.cli:main'
+pv-cli = 'prevenger.cli:main'
 
 [tool.black]
 exclude = '''

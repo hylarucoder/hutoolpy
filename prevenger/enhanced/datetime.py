@@ -5,6 +5,8 @@ import datetime
 
 from typing import Tuple, Union
 
+from calendar import monthrange
+
 """
 国际常用
 """
@@ -23,6 +25,7 @@ DATE_PATTERN_CHINESE = "%Y年%m月%d日"
 TIME_PATTERN_CHINESE = "%H时%M分%S秒"
 
 DateType = datetime.date
+DateTimeType = datetime.datetime
 DateOrDateTimeType = Union[datetime.date, datetime.datetime]
 
 
@@ -67,3 +70,37 @@ def get_week_start_and_end(date: DateType) -> Tuple[DateType, DateType]:
     start = date - datetime.timedelta(days=date.weekday())
     end = start + datetime.timedelta(days=6)
     return start, end
+
+
+def get_day_start(date: DateOrDateTimeType) -> DateTimeType:
+    return datetime.datetime(date.year, date.month, date.day, 0, 0, 0)
+
+
+def get_day_end(date: DateOrDateTimeType) -> DateTimeType:
+    return datetime.datetime(date.year, date.month, date.day, 23, 59, 59)
+
+
+def get_month_start(date: DateOrDateTimeType) -> DateTimeType:
+    return datetime.datetime(date.year, date.month, 1, 0, 0, 0)
+
+
+def get_month_end(date: DateOrDateTimeType) -> DateTimeType:
+    return datetime.datetime(
+        date.year, date.month, monthrange(date.year, date.month)[1], 23, 59, 59,
+    )
+
+
+def format_date(date, pattern=DATE_PATTERN) -> str:
+    return datetime.datetime.strftime(date, pattern)
+
+
+def format_datetime(dt, pattern=DATETIME_PATTERN) -> str:
+    return datetime.datetime.strftime(dt, pattern)
+
+
+def parse_date(date, pattern=DATE_PATTERN) -> datetime.date:
+    return datetime.datetime.strptime(date, pattern)
+
+
+def parse_datetime(dt, pattern=DATETIME_PATTERN) -> datetime.datetime:
+    return datetime.datetime.strptime(dt, pattern)
