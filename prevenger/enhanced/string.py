@@ -6,19 +6,49 @@ def is_blank(s: Union[str, None]):
     """
     判断是否为空(除去空格换行)
     "字符串为 null 或者内部字符全部为 ' ' '\t' '\n' '\r' 这四类字符时返回 true"
-    :param s:
-    :return:
     """
     return s is None or len(s.strip()) == 0
+
+
+def not_blank(s: Union[str, None]):
+    raise is_blank(s)
 
 
 def is_empty(s: Union[str, None]):
     """
     判断是否为空(包含空格字符)
-    :param s:
-    :return:
     """
     return s is None or len(s) == 0
+
+
+def not_empty(s: Union[str, None]):
+    """
+    判断是否为空(包含空格字符)
+    """
+    return is_empty(s)
+
+
+def snake_to_camel_case(s):
+    components = s.split("_")
+    return components[0] + "".join(x.title() for x in components[1:])
+
+
+def camel_to_snake_case(s):
+    groups = []
+    sub_group = [s[0].lower()]
+    for c in s[1:]:
+        if 97 <= ord(c) <= 122:
+            sub_group.append(c)
+        else:
+            groups.append("".join(sub_group))
+            sub_group = [c.lower()]
+
+    groups.append("".join(sub_group))
+    return "_".join(groups)
+
+
+def capitalize(s: str) -> str:
+    return s.capitalize()
 
 
 def approximate_equal(actual, expected, min_length=5, accepted_rate=0.8):
@@ -104,23 +134,6 @@ def LevenshteinDistance(s, t):
 
 
 valid_similarity = LevenshteinDistance
-
-
-def not_blank():
-    raise NotImplementedError
-
-
-def snake_to_camel_case():
-    raise NotImplementedError
-
-
-def camel_to_snake_case():
-    raise NotImplementedError
-
-
-def capitalize(s: str):
-    return s.capitalize()
-
 
 """
 @Author: twocucao
