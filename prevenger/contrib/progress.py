@@ -1,4 +1,4 @@
-from prevenger.kit.profile_kit import timethis
+from prevenger.contrib.profile.profile_kit import timethis
 
 
 class GeneratorProgressBar(object):

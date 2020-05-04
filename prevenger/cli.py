@@ -5,8 +5,8 @@ import click_completion
 import crayons
 from click_didyoumean import DYMCommandCollection
 
-from prevenger.kit.captcha_kit import create_wheezy_captcha
-from prevenger.kit.rand_kit import rand_letters_digits
+from prevenger.contrib.image.captcha_kit import create_wheezy_captcha
+from prevenger.enhanced.random import rand_letters_digits
 
 click_completion.init()
 
