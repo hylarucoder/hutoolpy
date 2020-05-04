@@ -1,3 +1,4 @@
+import base64
 import sys
 
 import click
@@ -5,7 +6,7 @@ import click_completion
 import crayons
 from click_didyoumean import DYMCommandCollection
 
-from prevenger.contrib.image.captcha_kit import create_wheezy_captcha
+from prevenger.contrib.captcha import CustomImageCaptcha
 from prevenger.enhanced.random import rand_letters_digits
 
 click_completion.init()
@@ -89,7 +90,9 @@ def self_test():
 @click.option("--f", default=".", help="make captcha.")
 def captcha(f="."):
     chars = rand_letters_digits(5)
-    create_wheezy_captcha(chars).save(f"{f}/captcha.png")
+    image_data = CustomImageCaptcha().generate(chars)
+    image_data_b64 = base64.b64encode(image_data.getvalue()).decode("utf-8")
+    print(image_data_b64)
 
 
 @click.command()

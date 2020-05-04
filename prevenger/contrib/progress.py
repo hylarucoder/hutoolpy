@@ -1,9 +1,9 @@
-from prevenger.contrib.profile.profile_kit import timethis
+from prevenger.contrib.timing import timethis
 
 
 class GeneratorProgressBar(object):
     """
-    用于 Profile 快速 profile 某段代码
+    用于 Profile 快速 timing 某段代码
     def process(a):
         import time
         time.sleep(1)
