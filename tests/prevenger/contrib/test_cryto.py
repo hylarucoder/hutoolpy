@@ -2,30 +2,34 @@ import base64
 import hashlib
 import hmac
 
-
-def hmac_sha1(secret: [bytes, str], source: [bytes, str]):
-    if isinstance(source, str):
-        source = bytes(source, "utf-8")
-    if isinstance(secret, str):
-        secret = bytes(secret, "utf-8")
-    h = hmac.new(secret, source, hashlib.sha1)
-    signature = str(base64.encodebytes(h.digest()).strip(), "utf-8")
-    return signature
+from prevenger.contrib.crypto import hmac_sha1, hmac_sha256, hmac_md5, sha1, sha256, md5
 
 
-def hmac_md5(secret: [bytes, str], source: [bytes, str]):
-    if isinstance(source, str):
-        source = bytes(source, "utf-8")
-    if isinstance(secret, str):
-        secret = bytes(secret, "utf-8")
-    h = hmac.new(secret, source, hashlib.md5)
-    signature = str(base64.encodebytes(h.digest()).strip(), "utf-8")
-    return signature
+def test_sha1():
+    assert sha1(b"123456") == "7c4a8d09ca3762af61e59520943dc26494f8941b"
 
 
-def rc4_encrypt(key, msg):
-    pass
+def test_sha256():
+    assert (
+        sha256(b"123456")
+        == "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92"
+    )
 
 
-def rc4_decrypt(key, msg):
-    pass
+def test_md5():
+    assert md5(b"123456") == "e10adc3949ba59abbe56e057f20f883e"
+
+
+def test_hmac_sha1():
+    assert hmac_sha1(b"key", b"source") == b"/XHaIKIfbqOzTn/Bgr47Ek0X2kM="
+
+
+def test_hmac_sha256():
+    assert (
+        hmac_sha256(b"key", b"source")
+        == b"+mNy7n78m/usy4rFd/wqSYOF7ALboAXwHr0zVmvhJ8Q="
+    )
+
+
+def test_hmac_md5():
+    assert hmac_md5(b"key", b"source") == b"3txdFNN/eL153raF7GcnRQ=="
