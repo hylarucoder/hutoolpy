@@ -34,6 +34,10 @@ def snake_to_camel_case(s):
 
 
 def camel_to_snake_case(s):
+    """
+    Taken from
+    https://gist.github.com/zhy0216/a1a8c1d1ee3eebba86b91288b22ec7e2
+    """
     groups = []
     sub_group = [s[0].lower()]
     for c in s[1:]:
