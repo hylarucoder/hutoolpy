@@ -29,6 +29,7 @@ sqlalchemy = "*"
 black = "^19.10b0"
 pydantic = "^1.5.1"
 qrcode = "^6.1"
+pytest_sugar = "^0.9.3"
 
 [tool.poetry.dev-dependencies]
 ipython = "*"
@@ -36,10 +37,10 @@ fabric = "*"
 gunicorn = "*"
 flask = "*"
 pillow = "*"
-pandas = "*"
 xlsxwriter = "*"
 xlrd = "^1.2.0"
 ipdb = "*"
+captcha = "^0.3"
 
 coverage = "*"
 flake8 = "*"
@@ -48,7 +49,7 @@ mypy = "*"
 pytest = "*"
 pytest-cov = "*"
 pre-commit = "^1.16"
-captcha = "^0.3"
+virtualenv = "20.0.18"
 
 
 [tool.poetry.scripts]

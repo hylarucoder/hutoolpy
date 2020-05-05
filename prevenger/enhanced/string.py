@@ -29,26 +29,21 @@ def not_empty(s: Union[str, None]):
 
 
 def snake_to_camel_case(s):
+    if not isinstance(s, str):
+        return s
     components = s.split("_")
     return components[0] + "".join(x.title() for x in components[1:])
 
 
-def camel_to_snake_case(s):
-    """
-    Taken from
-    https://gist.github.com/zhy0216/a1a8c1d1ee3eebba86b91288b22ec7e2
-    """
-    groups = []
-    sub_group = [s[0].lower()]
-    for c in s[1:]:
-        if 97 <= ord(c) <= 122:
-            sub_group.append(c)
-        else:
-            groups.append("".join(sub_group))
-            sub_group = [c.lower()]
+camel_case_pattern = re.compile(r"(?<!^)(?=[A-Z])")
 
-    groups.append("".join(sub_group))
-    return "_".join(groups)
+
+def camel_to_snake_case(s, reversible=True):
+    if reversible:
+        return camel_case_pattern.sub("_", s).lower()
+    else:
+        s = re.sub("(.)([A-Z][a-z]+)", r"\1_\2", s)
+        return re.sub("([a-z0-9])([A-Z])", r"\1_\2", s).lower()
 
 
 def capitalize(s: str) -> str:
