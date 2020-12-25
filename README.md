@@ -1,7 +1,7 @@
-# prevenger
+# Cyberwander
 
 [![Build Status](https://travis-ci.org/twocucao/prevenger.svg?branch=master)](https://travis-ci.org/twocucao/prevenger)
-![pyversions](https://img.shields.io/badge/python%20-3.7%2B-blue.svg)
+![pyversions](https://img.shields.io/badge/python%20-3.9%2B-blue.svg)
 ![pypi](https://img.shields.io/pypi/v/nine.svg)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-ff69b4.svg)](https://github.com/twocucao/prevenger/issues)
 
@@ -16,6 +16,7 @@
 ---
 ChangeLog:
  - 2019-05-09: 初始化
+ - 2020-12-25: rename to Cyberwander
 
 ## License
 
