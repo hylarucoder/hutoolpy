@@ -1,12 +1,12 @@
 import pytest
 
-from prevenger.enhanced.string import (
+from cyberwander.enhanced.string import (
     PT_CHINESE_ID_CARD,
     PT_CHINESE_MOB_NUM,
     PT_CHINESE_MONEY,
     PT_CHINESE_TELEPHONE,
 )
-from prevenger.enhanced.re import has_pattern
+from cyberwander.enhanced.re import has_pattern
 
 
 @pytest.mark.parametrize(

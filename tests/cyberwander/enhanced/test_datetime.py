@@ -1,6 +1,6 @@
 import datetime
 
-from prevenger.enhanced.datetime import (
+from cyberwander.enhanced.datetime import (
     date_is_between,
     get_today,
     get_yesterday,

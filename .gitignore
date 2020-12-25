@@ -118,3 +118,4 @@ compose/elasticsearch/plugins/*
 
 .mypy_cache
 .vscode/
+.pytest_cache

@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "prevenger"
+name = "cyberwander"
 version = "0.1.0"
 description = "A set of tools that make Python tasty"
 include = []
@@ -9,14 +9,15 @@ authors = [
 
 readme = 'README.md'
 
-repository = "https://github.com/twocucao/prevengers"
-homepage = "https://github.com/twocucao/prevengers"
+repository = "https://github.com/twocucao/cyberwander"
+homepage = "https://github.com/twocucao/cyberwander"
 
-keywords = ['prevenger']
+keywords = ['cyberwander']
 
 [[tool.poetry.source]]
-name = "douban"
-url = 'https://pypi.douban.com/simple/'
+name = "aliyun"
+url = 'https://mirrors.aliyun.com/pypi/simple/'
+default = true
 
 [tool.poetry.dependencies]
 python = "^3.7"
@@ -53,8 +54,8 @@ virtualenv = "20.0.18"
 
 
 [tool.poetry.scripts]
-prevenger-cli = 'prevenger.cli:main'
-pv-cli = 'prevenger.cli:main'
+cyberwander-cli = 'cyberwander.cli:main'
+pv-cli = 'cyberwander.cli:main'
 
 [tool.black]
 exclude = '''
