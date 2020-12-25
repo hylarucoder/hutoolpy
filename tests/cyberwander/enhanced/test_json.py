@@ -1,4 +1,4 @@
-from prevenger.enhanced.json import (
+from cyberwander.enhanced.json import (
     json_snake_to_camel_case,
     json_camel_to_snake_case,
     json_equal,

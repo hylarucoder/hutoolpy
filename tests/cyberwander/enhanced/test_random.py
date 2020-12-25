@@ -1,5 +1,5 @@
 import datetime
-from prevenger.enhanced.random import (
+from cyberwander.enhanced.random import (
     rand_digits,
     rand_letters_digits,
     DEFAULT_RAN_LENGTH,

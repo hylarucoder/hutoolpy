@@ -1,6 +1,6 @@
 from click.testing import CliRunner
 
-from prevenger.cli import cli
+from cyberwander.cli import cli
 
 
 def test_command_line_interface():

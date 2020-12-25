@@ -1,4 +1,4 @@
-from prevenger.contrib.template import render_template
+from cyberwander.contrib.template import render_template
 
 
 def test_render_template():

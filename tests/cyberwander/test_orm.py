@@ -2,7 +2,7 @@ from sqlalchemy import Column, String, Integer, create_engine
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import sessionmaker, relationship
 
-from prevenger.orm import Model
+from cyberwander.orm import Model
 
 
 class User(Model):

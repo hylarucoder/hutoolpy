@@ -1,4 +1,4 @@
-from prevenger.contrib.timing import timethis
+from cyberwander.contrib.timing import timethis
 
 
 class GeneratorProgressBar(object):

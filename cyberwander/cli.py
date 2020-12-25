@@ -6,15 +6,15 @@ import click_completion
 import crayons
 from click_didyoumean import DYMCommandCollection
 
-from prevenger.contrib.captcha import CustomImageCaptcha
-from prevenger.enhanced.random import rand_letters_digits
+from cyberwander.contrib.captcha import CustomImageCaptcha
+from cyberwander.enhanced.random import rand_letters_digits
 
 click_completion.init()
 
 CONTEXT_SETTINGS = dict(help_option_names=["-h", "--help"])
 
 
-class PrevengerGroup(click.Group):
+class WanderGroup(click.Group):
     def get_help_option(self, ctx):
         help_options = self.get_help_option_names(ctx)
 
@@ -40,10 +40,10 @@ def setup_verbose(ctx, param, value):
 
 
 @click.group(
-    cls=PrevengerGroup, invoke_without_command=True, context_settings=CONTEXT_SETTINGS
+    cls=WanderGroup, invoke_without_command=True, context_settings=CONTEXT_SETTINGS
 )
 @click.option("-v", "--verbose", is_flag=True, help="Enables verbose mode.")
-@click.version_option(prog_name=crayons.white("prevenger", bold=True))
+@click.version_option(prog_name=crayons.white("cyberwander", bold=True))
 @click.pass_context
 def cli(ctx, verbose):
     """

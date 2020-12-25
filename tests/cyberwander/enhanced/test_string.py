@@ -1,4 +1,4 @@
-from prevenger.enhanced.string import camel_to_snake_case, snake_to_camel_case
+from cyberwander.enhanced.string import camel_to_snake_case, snake_to_camel_case
 
 
 def test_camel_to_snake_case():
