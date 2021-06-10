@@ -1,4 +1,4 @@
-from cyberwander.contrib.timing import timethis
+from hutoolpy.timing import timethis
 
 
 class GeneratorProgressBar(object):

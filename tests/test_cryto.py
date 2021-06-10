@@ -2,7 +2,7 @@ import base64
 import hashlib
 import hmac
 
-from cyberwander.contrib.crypto import hmac_sha1, hmac_sha256, hmac_md5, sha1, sha256, md5
+from hutoolpy.crypto import hmac_sha1, hmac_sha256, hmac_md5, sha1, sha256, md5
 
 
 def test_sha1():

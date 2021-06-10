@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "cyberwander"
+name = "hutoolpy"
 version = "0.1.0"
 description = "A set of tools that make Python tasty"
 include = []
@@ -9,10 +9,18 @@ authors = [
 
 readme = 'README.md'
 
-repository = "https://github.com/twocucao/cyberwander"
-homepage = "https://github.com/twocucao/cyberwander"
+repository = "https://github.com/twocucao/hutoolpy"
+homepage = "https://github.com/twocucao/hutoolpy"
 
-keywords = ['cyberwander']
+keywords = ['hutoolpy']
+
+classifiers = [
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/twocucao/hutoolpy/issues"
 
 [[tool.poetry.source]]
 name = "aliyun"
@@ -20,17 +28,15 @@ url = 'https://mirrors.aliyun.com/pypi/simple/'
 default = true
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.9"
 werkzeug = "*"
 requests = "*"
-click_didyoumean = "^0.0.3"
-crayons = "^0.2.0"
-click_completion = "^0.5.1"
+click_didyoumean = "*"
+crayons = "*"
+click_completion = "*"
 sqlalchemy = "*"
-black = "^19.10b0"
-pydantic = "^1.5.1"
-qrcode = "^6.1"
-pytest_sugar = "^0.9.3"
+pydantic = "*"
+qrcode = "*"
 
 [tool.poetry.dev-dependencies]
 ipython = "*"
@@ -39,9 +45,9 @@ gunicorn = "*"
 flask = "*"
 pillow = "*"
 xlsxwriter = "*"
-xlrd = "^1.2.0"
+xlrd = "*"
 ipdb = "*"
-captcha = "^0.3"
+captcha = "*"
 
 coverage = "*"
 flake8 = "*"
@@ -49,13 +55,21 @@ mypy = "*"
 
 pytest = "*"
 pytest-cov = "*"
-pre-commit = "^1.16"
-virtualenv = "20.0.18"
+pytest_sugar = "*"
+pre-commit = "*"
+black = "*"
 
+# A list of all of the optional dependencies, some of which are included in the
+# below `extras`. They can be opted into by apps.
+psycopg2 = { version = "^2.7", optional = true }
+mysqlclient = { version = "^1.3", optional = true }
+
+[tool.poetry.extras]
+mysql = ["mysqlclient"]
+pgsql = ["psycopg2"]
 
 [tool.poetry.scripts]
-cyberwander-cli = 'cyberwander.cli:main'
-pv-cli = 'cyberwander.cli:main'
+hutoolpy-cli = 'hutoolpy.cli:main'
 
 [tool.black]
 exclude = '''
@@ -73,8 +87,9 @@ exclude = '''
   | scripts
 )/
 '''
+
 [build-system]
-requires = ["poetry>=0.12"]
-build-backend = "poetry.masonry.api"
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
 
 

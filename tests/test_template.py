@@ -1,4 +1,4 @@
-from cyberwander.contrib.template import render_template
+from hutoolpy.template import render_template
 
 
 def test_render_template():

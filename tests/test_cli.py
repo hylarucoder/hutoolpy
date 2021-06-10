@@ -1,6 +1,6 @@
 from click.testing import CliRunner
 
-from cyberwander.cli import cli
+from hutoolpy.cli import cli
 
 
 def test_command_line_interface():

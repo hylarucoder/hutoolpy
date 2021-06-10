@@ -1,6 +1,6 @@
 import time
 
-from cyberwander.contrib.progress import GeneratorProgressBar
+from hutoolpy.progress import GeneratorProgressBar
 
 
 def process(value):
