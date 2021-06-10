@@ -6,8 +6,7 @@ import click_completion
 import crayons
 from click_didyoumean import DYMCommandCollection
 
-from cyberwander.contrib.captcha import CustomImageCaptcha
-from cyberwander.enhanced.random import rand_letters_digits
+from hutoolpy.captcha import CustomImageCaptcha
 
 click_completion.init()
 
@@ -43,7 +42,7 @@ def setup_verbose(ctx, param, value):
     cls=WanderGroup, invoke_without_command=True, context_settings=CONTEXT_SETTINGS
 )
 @click.option("-v", "--verbose", is_flag=True, help="Enables verbose mode.")
-@click.version_option(prog_name=crayons.white("cyberwander", bold=True))
+@click.version_option(prog_name=crayons.white("hutoolpy", bold=True))
 @click.pass_context
 def cli(ctx, verbose):
     """

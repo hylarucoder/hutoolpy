@@ -86,7 +86,12 @@ def get_month_start(date: DateOrDateTimeType) -> DateTimeType:
 
 def get_month_end(date: DateOrDateTimeType) -> DateTimeType:
     return datetime.datetime(
-        date.year, date.month, monthrange(date.year, date.month)[1], 23, 59, 59,
+        date.year,
+        date.month,
+        monthrange(date.year, date.month)[1],
+        23,
+        59,
+        59,
     )
 
 

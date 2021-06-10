@@ -3,7 +3,7 @@ import datetime
 from sqlalchemy import DateTime, Column, Integer
 from sqlalchemy.ext.declarative import declarative_base
 
-from cyberwander.decorators import classproperty
+from hutoolpy.decorators import classproperty
 
 
 def get_current_time():

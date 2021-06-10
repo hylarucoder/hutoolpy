@@ -1,5 +1,5 @@
 import datetime
-from cyberwander.enhanced.random import (
+from hutoolpy.random import (
     rand_digits,
     rand_letters_digits,
     DEFAULT_RAN_LENGTH,

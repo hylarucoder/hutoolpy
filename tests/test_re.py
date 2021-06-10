@@ -1,12 +1,12 @@
 import pytest
 
-from cyberwander.enhanced.string import (
+from hutoolpy.string import (
     PT_CHINESE_ID_CARD,
     PT_CHINESE_MOB_NUM,
     PT_CHINESE_MONEY,
     PT_CHINESE_TELEPHONE,
 )
-from cyberwander.enhanced.re import has_pattern
+from hutoolpy.re import has_pattern
 
 
 @pytest.mark.parametrize(

@@ -155,7 +155,7 @@ def unique_justseen(iterable, key=None):
 
 
 def iter_except(func, exception, first=None):
-    """ Call a function repeatedly until an exception is raised.
+    """Call a function repeatedly until an exception is raised.
 
     Converts a call-until-exception interface to an iterator interface.
     Like builtins.iter(func, sentinel) but uses an exception instead
