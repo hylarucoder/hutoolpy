@@ -2,7 +2,7 @@ from sqlalchemy import Column, String, Integer, create_engine
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import sessionmaker, relationship
 
-from hutoolpy.orm import Model
+from hutoolpy.sa import Model
 
 
 class User(Model):

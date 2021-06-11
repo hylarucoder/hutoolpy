@@ -1,7 +1,6 @@
 import base64
 import hashlib
 import hmac
-from typing import Union
 
 
 def sha1(message: bytes) -> str:

@@ -6,7 +6,8 @@ import click_completion
 import crayons
 from click_didyoumean import DYMCommandCollection
 
-from hutoolpy.captcha import CustomImageCaptcha
+from hutoolpy.extra.captcha import CustomImageCaptcha
+from hutoolpy.random import rand_letters_digits
 
 click_completion.init()
 

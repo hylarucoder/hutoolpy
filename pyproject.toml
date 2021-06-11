@@ -37,6 +37,7 @@ click_completion = "*"
 sqlalchemy = "*"
 pydantic = "*"
 qrcode = "*"
+schedule = "^1.1.0"
 
 [tool.poetry.dev-dependencies]
 ipython = "*"

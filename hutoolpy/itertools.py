@@ -171,7 +171,7 @@ def iter_except(func, exception, first=None):
     """
     try:
         if first is not None:
-            yield first()  # For database APIs needing an initial cast to db.first()
+            yield first()  # For database APIs needing an initial cast to sa.first()
         while True:
             yield func()
     except exception:

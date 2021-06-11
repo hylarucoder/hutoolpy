@@ -1,7 +1,7 @@
 from hutoolpy.timing import timethis
 
 
-class GeneratorProgressBar(object):
+class GeneratorProgressBar:
     """
     用于 Profile 快速 timing 某段代码
     def process(a):

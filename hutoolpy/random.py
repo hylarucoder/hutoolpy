@@ -2,6 +2,7 @@ import random
 import string
 import datetime
 import uuid
+from typing import Any
 
 DEFAULT_RAN_LENGTH = 8
 
@@ -38,3 +39,19 @@ def rand_date(date_from: datetime.date, date_to: datetime.date) -> datetime.date
 
 def rand_uuid():
     return str(uuid.uuid4())
+
+
+class WeightedRand:
+    total: int
+    pairs: list[list[int, Any]]
+
+    def __init__(self, pairs: list[list[int, Any]]):
+        self.pairs = pairs
+        self.total = sum(pair[0] for pair in pairs)
+
+    def rand(self):
+        r = random.randint(1, self.total)
+        for (weight, value) in self.pairs:
+            r -= weight
+            if r <= 0:
+                return value
