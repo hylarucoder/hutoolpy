@@ -41,7 +41,6 @@ schedule = "^1.1.0"
 
 [tool.poetry.dev-dependencies]
 ipython = "*"
-fabric = "*"
 gunicorn = "*"
 flask = "*"
 pillow = "*"
