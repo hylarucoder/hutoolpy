@@ -1,5 +1,9 @@
+import logging
+
 import schedule
 import time
+
+logger = logging.getLogger("hutoolpy.cron")
 
 
 def job():
