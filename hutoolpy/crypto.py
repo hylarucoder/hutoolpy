@@ -57,4 +57,5 @@ def caesar_decode(message: str, offset: int):
         chars.append(char)
     return "".join(chars)
 
+
 # TODO: morse 密码
