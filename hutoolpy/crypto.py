@@ -1,7 +1,6 @@
 import base64
 import hashlib
 import hmac
-from typing import Union
 
 
 def sha1(message: bytes) -> str:
@@ -38,5 +37,25 @@ def hmac_md5(secret: bytes, source: bytes) -> bytes:
     return base64.encodebytes(h.digest()).strip()
 
 
-# TODO: caesar 密码
+CAESAR_TABLE = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
+
+
+def caesar_encode(message: str, offset: int):
+    length = len(CAESAR_TABLE)
+    chars = []
+    for _char in message:
+        char = CAESAR_TABLE[(CAESAR_TABLE.index(_char) + offset) % length]
+        chars.append(char)
+    return "".join(chars)
+
+
+def caesar_decode(message: str, offset: int):
+    length = len(CAESAR_TABLE)
+    chars = []
+    for _char in message:
+        char = CAESAR_TABLE[(CAESAR_TABLE.index(_char) + length - offset) % length]
+        chars.append(char)
+    return "".join(chars)
+
+
 # TODO: morse 密码

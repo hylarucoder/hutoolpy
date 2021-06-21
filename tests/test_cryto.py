@@ -2,7 +2,7 @@ import base64
 import hashlib
 import hmac
 
-from hutoolpy.crypto import hmac_sha1, hmac_sha256, hmac_md5, sha1, sha256, md5
+from hutoolpy.crypto import hmac_sha1, hmac_sha256, hmac_md5, sha1, sha256, md5, caesar_encode, caesar_decode
 
 
 def test_sha1():
@@ -11,8 +11,8 @@ def test_sha1():
 
 def test_sha256():
     assert (
-        sha256(b"123456")
-        == "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92"
+            sha256(b"123456")
+            == "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92"
     )
 
 
@@ -26,10 +26,14 @@ def test_hmac_sha1():
 
 def test_hmac_sha256():
     assert (
-        hmac_sha256(b"key", b"source")
-        == b"+mNy7n78m/usy4rFd/wqSYOF7ALboAXwHr0zVmvhJ8Q="
+            hmac_sha256(b"key", b"source")
+            == b"+mNy7n78m/usy4rFd/wqSYOF7ALboAXwHr0zVmvhJ8Q="
     )
 
 
-def test_hmac_md5():
-    assert hmac_md5(b"key", b"source") == b"3txdFNN/eL153raF7GcnRQ=="
+def test_caesar_encode():
+    assert caesar_encode("IloveYou", 10) == "NqtajDtz"
+
+
+def test_caesar_decode():
+    assert caesar_decode("NqtajDtz", 10) == "IloveYou"
