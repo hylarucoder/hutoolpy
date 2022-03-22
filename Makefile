@@ -17,7 +17,7 @@ help:
 
 
 test: ## test
-	pytest
+	poetry run pytest
 
 publish: ## publish package to pypi
 	poetry version
