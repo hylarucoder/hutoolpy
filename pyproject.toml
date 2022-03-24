@@ -31,13 +31,12 @@ default = true
 python = "^3.9"
 werkzeug = "*"
 requests = "*"
-click_didyoumean = "*"
 crayons = "*"
-click_completion = "*"
 sqlalchemy = "*"
 pydantic = "*"
 qrcode = "*"
 schedule = "^1.1.0"
+typer = "^0.4.0"
 
 [tool.poetry.dev-dependencies]
 ipython = "*"
@@ -63,13 +62,14 @@ black = "*"
 # below `extras`. They can be opted into by apps.
 psycopg2 = { version = "^2.7", optional = true }
 mysqlclient = { version = "^1.3", optional = true }
+pytest-benchmark = "^3.4.1"
 
 [tool.poetry.extras]
 mysql = ["mysqlclient"]
 pgsql = ["psycopg2"]
 
 [tool.poetry.scripts]
-hutoolpy-cli = 'hutoolpy.cli:main'
+ht-cli = 'hutoolpy.cli:cli_app'
 
 [tool.black]
 exclude = '''
