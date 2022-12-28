@@ -1,6 +1,6 @@
 from functools import lru_cache
 
-from pydantic import BaseSettings, PostgresDsn
+from pydantic import BaseSettings
 
 
 class PvSettings(BaseSettings):

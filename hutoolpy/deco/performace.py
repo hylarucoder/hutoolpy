@@ -1,9 +1,8 @@
-from cProfile import Profile
 import contextlib
 import functools
 import pstats
 import time
-from functools import wraps
+from cProfile import Profile
 
 
 def prof_deco(sort_by="cumtime", limit=10, timer=time.perf_counter):
