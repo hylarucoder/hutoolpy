@@ -3,14 +3,14 @@ import datetime
 from sqlalchemy import DateTime, Column, Integer
 from sqlalchemy.ext.declarative import declarative_base
 
-from hutoolpy.decorators import classproperty
+from hutoolpy.deco import classproperty
 
 
 def get_current_time():
     return datetime.datetime.now()
 
 
-class BaseModel(object):
+class BaseModel:
     id = Column(Integer, primary_key=True)
     created_at = Column(DateTime, default=get_current_time)
     updated_at = Column(DateTime, default=get_current_time, onupdate=get_current_time)
