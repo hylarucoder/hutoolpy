@@ -21,11 +21,7 @@ def multi_thread_submit(
     executor = ThreadPoolExecutor(max_workers=max_workers)
     future_list = []
     for item in items:
-        future_list.append(
-            executor.submit(
-                func, *item["args"], **item["kwargs"]
-            )  # .add_done_callback()
-        )
+        future_list.append(executor.submit(func, *item["args"], **item["kwargs"]))  # .add_done_callback()
     done_iter = as_completed(future_list)
     executor.shutdown(wait=True)
     return done_iter
@@ -40,11 +36,7 @@ def multi_process_submit(
 
     future_list = []
     for item in items:
-        future_list.append(
-            executor.submit(
-                func, *item["args"], **item["kwargs"]
-            )  # .add_done_callback()
-        )
+        future_list.append(executor.submit(func, *item["args"], **item["kwargs"]))  # .add_done_callback()
     done_iter = as_completed(future_list)
     executor.shutdown(wait=True)
     return done_iter

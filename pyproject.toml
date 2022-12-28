@@ -1,77 +1,63 @@
-[tool.poetry]
+[project]
 name = "hutoolpy"
-version = "0.1.0"
-description = "A set of tools that make Python tasty"
-include = []
+version = "0.2.0"
+description = ""
 authors = [
-    "twocucao <twocucao@gmail.com>"
+    {name = "twocucao", email = "twocucao@gmail.com"},
 ]
-
-readme = 'README.md'
-
-repository = "https://github.com/twocucao/hutoolpy"
-homepage = "https://github.com/twocucao/hutoolpy"
-
-keywords = ['hutoolpy']
-
-classifiers = [
-    "Topic :: Software Development :: Build Tools",
-    "Topic :: Software Development :: Libraries :: Python Modules"
+dependencies = [
+    "requests~=2.26",
+    "flask~=2.0",
+    "werkzeug~=2.0",
+    "click-didyoumean~=0.3",
+    "crayons~=0.4",
+    "click-completion~=0.5",
+    "sqlalchemy~=1.4",
+    "pydantic~=1.8",
+    "qrcode~=7.3",
+    "schedule~=1.1",
+    "pillow>=9.3.0",
+    "captcha>=0.4",
+    "typer>=0.7.0",
 ]
+requires-python = ">=3.9"
+dynamic = ["classifiers"]
+license = {text = "MIT"}
 
-[tool.poetry.urls]
-"Bug Tracker" = "https://github.com/twocucao/hutoolpy/issues"
+[project.urls]
+homepage = ""
 
-[[tool.poetry.source]]
-name = "aliyun"
-url = 'https://mirrors.aliyun.com/pypi/simple/'
-default = true
+[build-system]
+requires = ["pdm-pep517>=1.0.0"]
+build-backend = "pdm.pep517.api"
 
-[tool.poetry.dependencies]
-python = "^3.9"
-werkzeug = "*"
-requests = "*"
-crayons = "*"
-sqlalchemy = "*"
-pydantic = "*"
-qrcode = "*"
-schedule = "^1.1.0"
-typer = "^0.4.0"
+[tool.pdm]
 
-[tool.poetry.dev-dependencies]
-ipython = "*"
-gunicorn = "*"
-flask = "*"
-pillow = "*"
-xlsxwriter = "*"
-xlrd = "*"
-ipdb = "*"
-captcha = "*"
+[[tool.pdm.source]]
+name = "pypi"
+url = "https://mirrors.cloud.tencent.com/pypi/simple"
+verify_ssl = true
 
-coverage = "*"
-flake8 = "*"
-mypy = "*"
 
-pytest = "*"
-pytest-cov = "*"
-pytest_sugar = "*"
-pre-commit = "*"
-black = "*"
-
-# A list of all of the optional dependencies, some of which are included in the
-# below `extras`. They can be opted into by apps.
-psycopg2 = { version = "^2.7", optional = true }
-mysqlclient = { version = "^1.3", optional = true }
-pytest-benchmark = "^3.4.1"
-
-[tool.poetry.extras]
-mysql = ["mysqlclient"]
-pgsql = ["psycopg2"]
-
-[tool.poetry.scripts]
-ht-cli = 'hutoolpy.cli:cli_app'
-
+[tool.pdm.dev-dependencies]
+dev = [
+    "ipython>=8.7.0",
+    "gunicorn>=20.1.0",
+    "xlsxwriter>=3.0.3",
+    "xlrd>=2.0.1",
+    "ipdb>=0.13.11",
+    "coverage>=7.0.1",
+    "flake8>=6.0.0",
+    "mypy>=0.991",
+    "pytest>=7.2.0",
+    "pytest-cov>=4.0.0",
+    "pytest-sugar>=0.9.6",
+    "pre-commit>=2.21.0",
+    "black>=22.12.0",
+]
 [tool.black]
+line-length = 120
+target-version = ['py39']
 exclude = '''
 /(
     \.git
@@ -83,13 +69,6 @@ exclude = '''
   | buck-out
   | build
   | dist
-  | assets
-  | scripts
+  | .cached
 )/
 '''
-
-[build-system]
-requires = ["poetry_core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
-
-
