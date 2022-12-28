@@ -18,9 +18,7 @@ def timethis(func):
         start = time.time()
         result = func(*args, **kwargs)
         end = time.time()
-        msg = "{func_name} :\t 耗时 {last_sec}".format(
-            func_name=func_name, last_sec=(end - start)
-        )
+        msg = "{func_name} :\t 耗时 {last_sec}".format(func_name=func_name, last_sec=(end - start))
         # TODO: 以后有机会引入日志系统,现在先用打印将就着
         print(msg)
         return result

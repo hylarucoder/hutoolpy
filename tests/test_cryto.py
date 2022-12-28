@@ -10,10 +10,7 @@ def test_sha1():
 
 
 def test_sha256():
-    assert (
-            sha256(b"123456")
-            == "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92"
-    )
+    assert sha256(b"123456") == "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92"
 
 
 def test_md5():
@@ -25,10 +22,7 @@ def test_hmac_sha1():
 
 
 def test_hmac_sha256():
-    assert (
-            hmac_sha256(b"key", b"source")
-            == b"+mNy7n78m/usy4rFd/wqSYOF7ALboAXwHr0zVmvhJ8Q="
-    )
+    assert hmac_sha256(b"key", b"source") == b"+mNy7n78m/usy4rFd/wqSYOF7ALboAXwHr0zVmvhJ8Q="
 
 
 def test_caesar_encode():
